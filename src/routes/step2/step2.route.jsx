@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Step2ItemAdded = () => {
+const Step2 = () => {
   return (
     <div>
       <h1>Step 2: Item Added to Basket</h1>
@@ -11,4 +11,4 @@ const Step2ItemAdded = () => {
   );
 };
 
-export default Step2ItemAdded;
+export default Step2;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-const Step4PaymentSuccess = () => {
+const Step4 = () => {
   const history = useHistory();
   const redirectTime = 5000; // 5000 milliseconds (5 seconds)
 
@@ -23,4 +23,4 @@ const Step4PaymentSuccess = () => {
   );
 };
 
-export default Step4PaymentSuccess;
+export default Step4;

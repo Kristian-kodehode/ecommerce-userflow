@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Step1SelectItem = () => {
+const Step1 = () => {
   return (
     <div>
       <h1>Step 1: Select Item</h1>
@@ -11,4 +11,4 @@ const Step1SelectItem = () => {
   );
 };
 
-export default Step1SelectItem;
+export default Step1;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Step3ShippingAndPayment = () => {
+const Step3 = () => {
   return (
     <div>
       <h1>Step 3: Add Shipping and Payment Details</h1>
@@ -11,4 +11,4 @@ const Step3ShippingAndPayment = () => {
   );
 };
 
-export default Step3ShippingAndPayment;
+export default Step3;
