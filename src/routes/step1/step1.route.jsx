@@ -1,0 +1,14 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Step1SelectItem = () => {
+  return (
+    <div>
+      <h1>Step 1: Select Item</h1>
+      {/* Add your content for selecting an item here */}
+      <Link to="/item-added">Next Step</Link>
+    </div>
+  );
+};
+
+export default Step1SelectItem;
