@@ -7,7 +7,7 @@ const Step4 = () => {
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      history.push("/select-item");
+      history.push("/step1");
     }, redirectTime);
 
     return () => clearTimeout(redirectTimeout);
@@ -18,7 +18,7 @@ const Step4 = () => {
       <h1>Step 4: Payment Successful!</h1>
       <p>Redirecting to Step 1...</p>
       {/* Optionally, you can provide a link to manually go back to Step 1 */}
-      <Link to="/select-item">Go back to Step 1</Link>
+      <Link to="/step1">Go back to Step 1</Link>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const Step2 = () => {
     <div>
       <h1>Step 2: Item Added to Basket</h1>
       {/* Add your content for displaying the basket here */}
-      <Link to="/shipping-and-payment">Next Step</Link>
+      <Link to="/step3">Next Step</Link>
     </div>
   );
 };

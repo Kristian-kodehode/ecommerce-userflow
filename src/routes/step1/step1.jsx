@@ -6,7 +6,7 @@ const Step1 = () => {
     <div>
       <h1>Step 1: Select Item</h1>
       {/* Add your content for selecting an item here */}
-      <Link to="/item-added">Next Step</Link>
+      <Link to="/step2">Next Step</Link>
     </div>
   );
 };
