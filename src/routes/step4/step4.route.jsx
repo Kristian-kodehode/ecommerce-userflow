@@ -1,24 +1,23 @@
 import React, { useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Step4 = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const redirectTime = 5000; // 5000 milliseconds (5 seconds)
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      history.push("/step1");
+      navigate("/");
     }, redirectTime);
 
     return () => clearTimeout(redirectTimeout);
-  }, [history]);
+  }, [navigate]);
 
   return (
     <div>
       <h1>Step 4: Payment Successful!</h1>
       <p>Redirecting to Step 1...</p>
-      {/* Optionally, you can provide a link to manually go back to Step 1 */}
-      <Link to="/step1">Go back to Step 1</Link>
+      <Link to="/">Go back to Step 1</Link>
     </div>
   );
 };
