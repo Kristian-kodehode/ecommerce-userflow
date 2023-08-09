@@ -23,10 +23,15 @@ const Step1 = () => {
         {products.map((product) => {
           return (
             <div key={product.id} className={styles.productCard}>
-              <img src={product.image} alt="" />
-              <h5>{product.category}</h5>
-              <h3>{product.title}</h3>
-              <h3>$ {product.price}</h3>
+              <div>
+                <img src={product.image} alt="" />
+                <h5>{product.category}</h5>
+              </div>
+              <div>
+                <h3>{product.title}</h3>
+                <h3>$ {product.price}</h3>
+              </div>
+              <button className={styles.buttonBuy}>CTA</button>
             </div>
           );
         })}
