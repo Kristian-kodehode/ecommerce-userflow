@@ -31,7 +31,10 @@ const Step1 = () => {
                 <h3>{product.title}</h3>
                 <h3>$ {product.price}</h3>
               </div>
-              <button className={styles.buttonBuy}>CTA</button>
+              <div className={styles.ctaButtons}>
+                <button className={styles.buttonBuy}>Buy Now</button>
+                <button className={styles.buttonAdd}>Add to Cart</button>
+              </div>
             </div>
           );
         })}
