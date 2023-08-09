@@ -27,12 +27,15 @@ const Step1 = () => {
                 <img src={product.image} alt="" />
                 <h5>{product.category}</h5>
               </div>
-              <div>
-                <h3>{product.title}</h3>
-                <h3>$ {product.price}</h3>
+
+              <div className={styles.cardTitleAndPrice}>
+                <h1 className={styles.cardPrice}>$ {product.price}</h1>
+                <h3 className={styles.cardTitle}>{product.title}</h3>
               </div>
               <div className={styles.ctaButtons}>
-                <button className={styles.buttonBuy}>Buy Now</button>
+                <button className={styles.buttonBuy}>
+                  Buy Now : $ {product.price}
+                </button>
                 <button className={styles.buttonAdd}>Add to Cart</button>
               </div>
             </div>
