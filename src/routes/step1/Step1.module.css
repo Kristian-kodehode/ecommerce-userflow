@@ -1,0 +1,22 @@
+/* Step1.module.css */
+.step1-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.productCard {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+img {
+  width: 50px;
+}
