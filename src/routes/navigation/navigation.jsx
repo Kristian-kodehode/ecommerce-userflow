@@ -12,7 +12,7 @@ const Navigation = () => {
         Cart
       </Link>
       <Link className={styles.navlinks} to="/aboutproject">
-        About project
+        About
       </Link>
     </nav>
   );

@@ -19,7 +19,7 @@ const Step1 = () => {
     <div className={styles.step1Container}>
       <div className={styles.headingscontainer}>
         <h1>Products</h1>
-        <h5>Select your products</h5>
+        <h6>Select your products</h6>
       </div>
       <ul className={styles.productList}>
         {products.map((product) => {
@@ -35,9 +35,7 @@ const Step1 = () => {
                 <h4 className={styles.cardPrice}>$ {product.price}</h4>
               </div>
               <div className={styles.ctaButtons}>
-                <button className={styles.buttonBuy}>
-                  Add to cart : $ {product.price}
-                </button>
+                <button className={styles.buttonBuy}>Add to cart</button>
                 <button className={styles.buttonAdd}>Info</button>
               </div>
             </div>

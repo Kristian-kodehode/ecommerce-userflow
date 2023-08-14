@@ -1,3 +1,13 @@
+nav {
+  /* width: 1200px; */
+  /* position: fixed; */
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  background-color: coral;
+}
+
 a {
   text-decoration: none;
 }

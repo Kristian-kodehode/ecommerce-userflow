@@ -1,12 +1,14 @@
 .step1Container {
   margin: 0px auto;
-  padding-top: 40px;
+
   /* padding: 1em; */
 }
 .headingscontainer {
   /* background-color: coral; */
   padding: 1em;
   color: black;
+  /* border: 1px solid red; */
+  text-align: center;
 }
 
 .productList {
@@ -19,10 +21,11 @@
 }
 
 .productCard {
-  height: 440px;
+  height: 450px;
   width: 350px;
   display: flex;
   flex-direction: column;
+  gap: 0.5em;
   padding: 1em;
   border: 1px solid #ddd;
   background-color: #fff;
@@ -44,7 +47,7 @@ img {
 
 .buttonBuy,
 .buttonAdd {
-  padding: 1em 1em;
+  padding: 1.2em 1em;
   cursor: pointer;
   letter-spacing: 0.5px;
   border: 1px solid #296bff;
@@ -53,9 +56,7 @@ img {
 .buttonBuy {
   /* background-color: #272829; */
   background-color: #296bff;
-  border: #296bff;
   color: #faf3f0;
-  font-weight: 700;
 }
 .buttonAdd {
   background-color: white;
@@ -66,7 +67,8 @@ img {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   /* border: 1px solid black; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 0.5em;
 }
 .cardCategory {
   color: gray;
