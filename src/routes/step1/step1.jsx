@@ -34,9 +34,9 @@ const Step1 = () => {
               </div>
               <div className={styles.ctaButtons}>
                 <button className={styles.buttonBuy}>
-                  Buy Now : $ {product.price}
+                  Add to cart : $ {product.price}
                 </button>
-                <button className={styles.buttonAdd}>Add to Cart</button>
+                <button className={styles.buttonAdd}>Info</button>
               </div>
             </div>
           );
