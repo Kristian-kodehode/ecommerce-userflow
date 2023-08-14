@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./rating.module.css";
 
-const RenderStars = ({ rating }) => {
+const RenderStars = ({ rating, ratingcount }) => {
   const maxStars = 5;
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
@@ -9,12 +9,15 @@ const RenderStars = ({ rating }) => {
   return (
     <div className={styles.rating}>
       {[...Array(maxStars)].map((_, index) => {
-        const starType =
-          index < fullStars
-            ? "filled-star"
-            : index === fullStars && hasHalfStar
-            ? "half-filled-star"
-            : "empty-star";
+        let starType = "";
+
+        if (index < fullStars) {
+          starType = "filled-star";
+        } else if (index === fullStars && hasHalfStar) {
+          starType = "half-filled-star";
+        } else {
+          starType = "empty-star";
+        }
 
         return (
           <span key={index} className={`${styles.star} ${styles[starType]}`}>
@@ -28,6 +31,7 @@ const RenderStars = ({ rating }) => {
           </span>
         );
       })}
+      ({ratingcount})
     </div>
   );
 };

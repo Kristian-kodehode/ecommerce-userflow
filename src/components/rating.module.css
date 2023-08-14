@@ -5,7 +5,7 @@
 }
 
 .star {
-  font-size: 1.2rem;
+  font-size: 1em;
   color: #f0c935; /* Color for unfilled stars */
   margin-right: 4px; /* Adjust spacing between stars */
 }
