@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Step1 from "../step1/step1";
+import("./navigation.module.css");
 
 const Navigation = () => {
   return (
     <nav>
       <Link to="/">Home</Link>
       <Link to="/step2">Cart</Link>
-      <h3>nav3</h3>
+      <Link to="/aboutproject">About project</Link>
     </nav>
   );
 };

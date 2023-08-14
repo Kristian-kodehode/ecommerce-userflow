@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import styles from "./Step1.module.css";
+import styles from "./step1.module.css";
 
 const Step1 = () => {
   const [products, setProducts] = useState([]);
