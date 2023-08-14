@@ -1,13 +1,9 @@
 .step1Container {
   margin: 0px auto;
-
-  /* padding: 1em; */
 }
 .headingscontainer {
-  /* background-color: coral; */
   padding: 1em;
   color: black;
-  /* border: 1px solid red; */
   text-align: center;
 }
 
@@ -44,12 +40,9 @@ img:hover {
 }
 
 .ctaButtons {
-  /* padding-top: 0.5em; */
-  /* padding-bottom: 1em; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: 1px solid #296bff;
-  /* gap: 0.5em; */
 }
 
 .buttonAdd,
@@ -87,8 +80,6 @@ img:hover {
 .cardTitleAndPrice {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  /* border: 1px solid black; */
-  /* justify-content: space-between; */
   gap: 0.5em;
 }
 
