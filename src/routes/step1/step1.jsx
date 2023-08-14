@@ -35,8 +35,8 @@ const Step1 = () => {
                 <h4 className={styles.cardPrice}>$ {product.price}</h4>
               </div>
               <div className={styles.ctaButtons}>
-                <button className={styles.buttonBuy}>Add to cart</button>
-                <button className={styles.buttonAdd}>Info</button>
+                <button className={styles.buttonAdd}>Add to cart</button>
+                <button className={styles.buttonInfo}>Info</button>
               </div>
             </div>
           );
