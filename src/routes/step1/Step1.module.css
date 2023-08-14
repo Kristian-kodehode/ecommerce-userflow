@@ -55,7 +55,6 @@ img:hover {
 .buttonAdd:hover,
 .buttonInfo:hover {
   font-size: 12px;
-
   text-decoration: underline;
 }
 
@@ -75,7 +74,12 @@ img:hover {
 .cardRating,
 .cardCategory {
   font-size: 12px;
+}
+.cardCategory {
   color: gray;
+}
+.cardRating {
+  color: #ffbe29;
 }
 .cardTitleAndPrice {
   display: grid;
