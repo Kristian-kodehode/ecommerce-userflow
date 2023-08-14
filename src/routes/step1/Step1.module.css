@@ -15,8 +15,9 @@
 }
 .categoryButtons button {
   border: none;
-  background-color: lightgray;
-  border: 1px solid lightgray;
+  /* background-color: lightgray; */
+  background-color: white;
+  border: 1px solid rgb(240, 240, 240);
   color: black;
   padding: 0.4em 1em;
   font-size: 12px;
@@ -24,7 +25,7 @@
   cursor: pointer;
 }
 .categoryButtons button:hover {
-  background-color: white;
+  background-color: rgb(240, 240, 240);
 }
 
 .productList {
