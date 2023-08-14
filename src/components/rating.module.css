@@ -2,10 +2,10 @@
 
 .rating {
   display: inline-block;
+  font-size: 0.8em;
 }
 
 .star {
-  font-size: 1em;
   color: #f0c935; /* Color for unfilled stars */
   margin-right: 4px; /* Adjust spacing between stars */
 }
