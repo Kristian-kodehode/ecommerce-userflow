@@ -27,15 +27,14 @@ a {
 }
 .navlinks::before {
   transition: 300ms;
-  height: 5px;
+  height: 2px;
   content: "";
   position: absolute;
-  /* background-color: #031d44; */
   background-color: white;
 }
 .navlinksfadeup::before {
   width: 100%;
-  bottom: 5px;
+  bottom: 1px;
   opacity: 0;
 }
 .navlinksfadeup:hover::before {
