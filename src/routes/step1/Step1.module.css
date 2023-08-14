@@ -11,7 +11,6 @@
 
 .productList {
   min-width: 300px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -69,6 +68,9 @@ img {
   /* border: 1px solid black; */
   justify-content: space-between;
 }
+.cardCategory {
+  color: gray;
+}
 .cardTitle {
   min-height: 40px;
   display: -webkit-box;
@@ -76,7 +78,8 @@ img {
   -webkit-box-orient: vertical;
   overflow: hidden;
   letter-spacing: 0.5px;
+  color: #272829;
 }
 .cardPrice {
-  color: #272829;
+  color: coral;
 }

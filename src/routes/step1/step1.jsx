@@ -27,12 +27,12 @@ const Step1 = () => {
             <div key={product.id} className={styles.productCard}>
               <div>
                 <img src={product.image} alt="" />
-                <h5>{product.category}</h5>
+                <h6 className={styles.cardCategory}>{product.category}</h6>
               </div>
 
               <div className={styles.cardTitleAndPrice}>
-                <h1 className={styles.cardPrice}>$ {product.price}</h1>
-                <h3 className={styles.cardTitle}>{product.title}</h3>
+                <h4 className={styles.cardTitle}>{product.title}</h4>
+                <h4 className={styles.cardPrice}>$ {product.price}</h4>
               </div>
               <div className={styles.ctaButtons}>
                 <button className={styles.buttonBuy}>
