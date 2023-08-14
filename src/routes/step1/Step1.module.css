@@ -2,6 +2,9 @@
   margin: 0 auto;
   padding: 1em;
 }
+.headingscontainer {
+  background-color: coral;
+}
 
 .productList {
   min-width: 300px;
@@ -40,19 +43,22 @@ img {
 
 .buttonBuy,
 .buttonAdd {
-  padding: 0.9em 1em;
+  padding: 1em 1em;
   cursor: pointer;
   letter-spacing: 0.5px;
-  border: 1px solid #272829;
+  border: 1px solid #296bff;
 }
 
 .buttonBuy {
-  background-color: #272829;
+  /* background-color: #272829; */
+  background-color: #296bff;
+  border: #296bff;
   color: #faf3f0;
+  font-weight: 700;
 }
 .buttonAdd {
-  background-color: #faf3f0;
-  color: #272829;
+  background-color: white;
+  color: #296bff;
 }
 
 .cardTitleAndPrice {

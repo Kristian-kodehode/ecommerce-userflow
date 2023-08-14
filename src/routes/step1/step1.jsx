@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./step1.module.css";
 
@@ -17,8 +17,10 @@ const Step1 = () => {
 
   return (
     <div className={styles.step1Container}>
-      <h1>Step 1: Select Item</h1>
-      <h3>This app is ready for styling now 😃</h3>
+      <div className={styles.headingscontainer}>
+        <h1>Products</h1>
+        <h5>Select your products</h5>
+      </div>
       <ul className={styles.productList}>
         {products.map((product) => {
           return (
