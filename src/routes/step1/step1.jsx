@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import styles from "./step1.module.css";
+import RenderStars from "../../components/rating.jsx";
 
 const Step1 = () => {
   const [products, setProducts] = useState([]);
@@ -29,9 +31,10 @@ const Step1 = () => {
                 <img src={product.image} alt="" />
                 <div className={styles.priceAndRating}>
                   <h6 className={styles.cardCategory}>{product.category}</h6>
-                  <h6 className={styles.cardRating}>
+                  {/* <h6 className={styles.cardRating}>
                     Rating: {product.rating.rate} ({product.rating.count})
-                  </h6>
+                  </h6> */}
+                  <RenderStars rating={product.rating.rate} />
                 </div>
               </div>
 

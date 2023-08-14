@@ -1,0 +1,15 @@
+/* Rating.css */
+
+.rating {
+  display: inline-block;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #f0c935; /* Color for unfilled stars */
+  margin-right: 4px; /* Adjust spacing between stars */
+}
+
+.filled-star {
+  color: #ffda44; /* Color for filled stars */
+}
