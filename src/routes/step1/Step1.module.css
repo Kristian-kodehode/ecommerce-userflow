@@ -75,7 +75,15 @@ img:hover {
   background-color: white;
   color: #296bff;
 }
-
+.priceAndRating {
+  display: flex;
+  justify-content: space-between;
+}
+.cardRating,
+.cardCategory {
+  font-size: 12px;
+  color: gray;
+}
 .cardTitleAndPrice {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -83,9 +91,7 @@ img:hover {
   /* justify-content: space-between; */
   gap: 0.5em;
 }
-.cardCategory {
-  color: gray;
-}
+
 .cardTitle {
   min-height: 40px;
   display: -webkit-box;
@@ -96,6 +102,7 @@ img:hover {
   color: #272829;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 14px;
 }
 .cardTitle:hover {
   text-decoration: underline;
@@ -103,4 +110,5 @@ img:hover {
 }
 .cardPrice {
   color: coral;
+  font-size: 22px;
 }

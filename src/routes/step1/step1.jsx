@@ -27,7 +27,12 @@ const Step1 = () => {
             <div key={product.id} className={styles.productCard}>
               <div>
                 <img src={product.image} alt="" />
-                <h6 className={styles.cardCategory}>{product.category}</h6>
+                <div className={styles.priceAndRating}>
+                  <h6 className={styles.cardCategory}>{product.category}</h6>
+                  <h6 className={styles.cardRating}>
+                    Rating: {product.rating.rate} ({product.rating.count})
+                  </h6>
+                </div>
               </div>
 
               <div className={styles.cardTitleAndPrice}>
