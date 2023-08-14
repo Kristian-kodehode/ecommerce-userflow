@@ -6,6 +6,7 @@ import RenderStars from "../../components/rating.jsx";
 
 const Step1 = () => {
   const [products, setProducts] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -17,14 +18,37 @@ const Step1 = () => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+  const filteredProducts = selectedCategory
+    ? products.filter((product) => product.category === selectedCategory)
+    : products;
+  const categories = [
+    "Show All",
+    ...Array.from(new Set(products.map((product) => product.category))),
+  ];
+
   return (
     <div className={styles.step1Container}>
       <div className={styles.headingscontainer}>
         <h1>Products</h1>
         <h6>Select your products</h6>
       </div>
+      <div className={styles.categoryButtons}>
+        {categories.map((category) => (
+          <button
+            key={category}
+            className={
+              selectedCategory === category ? styles.activeCategory : ""
+            }
+            onClick={() =>
+              setSelectedCategory(category === "Show All" ? null : category)
+            }
+          >
+            {category}
+          </button>
+        ))}
+      </div>
       <ul className={styles.productList}>
-        {products.map((product) => {
+        {filteredProducts.map((product) => {
           return (
             <div key={product.id} className={styles.productCard}>
               <div>

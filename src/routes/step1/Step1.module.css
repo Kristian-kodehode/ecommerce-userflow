@@ -6,6 +6,26 @@
   color: black;
   text-align: center;
 }
+.categoryButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em 1em;
+  margin-bottom: 1em;
+}
+.categoryButtons button {
+  border: none;
+  background-color: lightgray;
+  border: 1px solid lightgray;
+  color: black;
+  padding: 0.4em 1em;
+  font-size: 12px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.categoryButtons button:hover {
+  background-color: white;
+}
 
 .productList {
   min-width: 300px;
