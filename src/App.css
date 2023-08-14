@@ -10,6 +10,11 @@ html {
   /* background-color: antiquewhite; */
   font-family: "Work Sans", sans-serif;
   background-color: white;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
