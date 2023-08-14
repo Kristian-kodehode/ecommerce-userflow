@@ -2,10 +2,11 @@ nav {
   padding: 1em;
   display: flex;
   gap: 1em;
+  background-color: coral;
 }
 a {
   text-decoration: none;
 }
 .navlinks {
-  color: red;
+  color: white;
 }
