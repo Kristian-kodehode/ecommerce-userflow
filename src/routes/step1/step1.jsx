@@ -55,9 +55,7 @@ const Step1 = () => {
                 <img src={product.image} alt="" />
                 <div className={styles.priceAndRating}>
                   <h6 className={styles.cardCategory}>{product.category}</h6>
-                  {/* <h6 className={styles.cardRating}>
-                   ({product.rating.count})
-                  </h6> */}
+
                   <RenderStars
                     rating={product.rating.rate}
                     ratingcount={product.rating.count}
