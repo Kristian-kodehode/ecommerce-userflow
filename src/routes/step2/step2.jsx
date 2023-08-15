@@ -3,8 +3,15 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../CartContext";
 
 const Step2 = () => {
-  const { selectedItems } = useCart();
-  console.log("selectedItems");
+  const { selectedItems, setSelectedItems } = useCart([]);
+
+  const handleRemove = (productId) => {
+    setSelectedItems((prevItems) => {
+      return prevItems.filter((item) => item.id !== productId);
+    });
+  };
+
+  console.log(selectedItems);
   return (
     <div>
       <h1>Step 2: Item Added to Basket</h1>
@@ -13,6 +20,7 @@ const Step2 = () => {
         {selectedItems.map((item, index) => (
           <li key={index}>
             {item.title} - ${item.price}
+            <button onClick={() => handleRemove(item.id)}>remove item</button>
           </li>
         ))}
       </ul>
