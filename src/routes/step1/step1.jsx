@@ -8,7 +8,7 @@ const Step1 = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   // const [selectedItems, setSelectedItems] = useState([]);
-  const { selectedItems, setSelectedItems } = useCart();
+  const { setSelectedItems } = useCart();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
