@@ -90,7 +90,7 @@ const Step1 = () => {
         })}
       </ul>
       {/* Add your content for selecting an item here */}
-      <Link to="/step2">Next Step</Link>
+      {/* <Link to="/step2">Next Step</Link> */}
     </div>
   );
 };
