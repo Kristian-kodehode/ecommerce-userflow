@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./routes/layout/layout";
-
+import { CartProvider } from "./CartContext";
 import "./App.css";
 
 import Step1 from "./routes/step1/step1.jsx";
@@ -11,15 +11,17 @@ import AboutProject from "./routes/aboutproject/aboutproject";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Step1 />} />
-        <Route path="/step2" element={<Step2 />} />
-        <Route path="/step3" element={<Step3 />} />
-        <Route path="/step4" element={<Step4 />} />
-        <Route path="/aboutproject" element={<AboutProject />} />
-      </Route>
-    </Routes>
+    <CartProvider>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Step1 />} />
+          <Route path="/step2" element={<Step2 />} />
+          <Route path="/step3" element={<Step3 />} />
+          <Route path="/step4" element={<Step4 />} />
+          <Route path="/aboutproject" element={<AboutProject />} />
+        </Route>
+      </Routes>
+    </CartProvider>
   );
 }
 

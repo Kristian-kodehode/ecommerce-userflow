@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { useCart } from "../../CartContext";
 import styles from "./step1.module.css";
 import RenderStars from "../../components/rating.jsx";
 
 const Step1 = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  // const [selectedItems, setSelectedItems] = useState([]);
+  const { selectedItems, setSelectedItems } = useCart();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -25,6 +27,13 @@ const Step1 = () => {
     "Show All",
     ...Array.from(new Set(products.map((product) => product.category))),
   ];
+
+  const handleAddToCart = (product) => {
+    setSelectedItems((prevItems) => {
+      return [...prevItems, product];
+    });
+    console.log(product);
+  };
 
   return (
     <div className={styles.step1Container}>
@@ -68,7 +77,12 @@ const Step1 = () => {
                 <h4 className={styles.cardPrice}>$ {product.price}</h4>
               </div>
               <div className={styles.ctaButtons}>
-                <button className={styles.buttonAdd}>Add to cart</button>
+                <button
+                  className={styles.buttonAdd}
+                  onClick={() => handleAddToCart(product)}
+                >
+                  Add to cart
+                </button>
                 <button className={styles.buttonInfo}>Info</button>
               </div>
             </div>
