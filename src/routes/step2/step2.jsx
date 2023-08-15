@@ -24,6 +24,7 @@ const Step2 = () => {
       <ul>
         {selectedItems.map((item, index) => (
           <li key={index}>
+            <img src={item.image} alt="" />
             {item.title} - ${item.price}
             <button onClick={() => handleRemove(item.id)}>remove item</button>
           </li>
