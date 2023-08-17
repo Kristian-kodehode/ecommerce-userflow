@@ -1,10 +1,12 @@
 nav {
   /* width: 1200px; */
   /* position: fixed; */
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   padding: 1em;
   background-color: var(--col-dark80);
-
+  /* height: 160px; */
+  text-align: center;
   /* background-color: coral; */
 }
 .linkcontainer {
@@ -19,8 +21,8 @@ a {
   text-decoration: none;
 }
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 /*
