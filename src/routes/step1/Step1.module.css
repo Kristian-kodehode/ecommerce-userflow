@@ -5,6 +5,7 @@
   padding: 1em;
   color: black;
   text-align: center;
+  font-family: "Barriecito", cursive;
 }
 .categoryButtons {
   display: flex;
@@ -63,7 +64,7 @@ img:hover {
 .ctaButtons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border: 1px solid #296bff;
+  border: 1px solid var(--col-dark80);
 }
 
 .buttonAdd,
@@ -80,13 +81,12 @@ img:hover {
 }
 
 .buttonAdd {
-  /* background-color: #272829; */
-  background-color: #296bff;
-  color: #faf3f0;
+  background-color: var(--col-dark80);
+  color: var(--col-dark10);
 }
 .buttonInfo {
   background-color: white;
-  color: #296bff;
+  color: var(--col-dark80);
 }
 .priceAndRating {
   display: flex;

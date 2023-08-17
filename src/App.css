@@ -12,10 +12,12 @@
   --col-dark40: #969696;
   --col-dark20: #c8c8c8;
   --col-dark10: #fafafa;
+  --col-cta1: #3d6cfc;
 }
 
 html {
   /* background-color: antiquewhite; */
+  font-family: "Barriecito", cursive;
   font-family: "Work Sans", sans-serif;
   background-color: white;
   -ms-overflow-style: none;
@@ -32,5 +34,5 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1); */
 }
