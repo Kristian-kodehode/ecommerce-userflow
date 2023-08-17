@@ -1,0 +1,20 @@
+.header {
+  color: blue;
+}
+
+.textwrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* border: 1px solid black; */
+}
+.orderedlist {
+  text-decoration: none;
+
+  padding: 1em;
+}
+.orderedlist i {
+  text-decoration: none;
+}
