@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --col-dark80: #323232;
+  --col-dark60: #646464;
+  --col-dark40: #969696;
+  --col-dark20: #c8c8c8;
+  --col-dark10: #fafafa;
+}
+
 html {
   /* background-color: antiquewhite; */
   font-family: "Work Sans", sans-serif;

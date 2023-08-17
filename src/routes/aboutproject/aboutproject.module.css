@@ -1,5 +1,5 @@
 .header {
-  color: blue;
+  color: var(--col-dark60);
 }
 
 .textwrapper {
@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   /* border: 1px solid black; */
+  color: var(--col-dark80);
 }
 .orderedlist {
   text-decoration: none;

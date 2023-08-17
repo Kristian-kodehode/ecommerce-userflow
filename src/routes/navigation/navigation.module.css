@@ -5,7 +5,8 @@ nav {
   display: flex;
   justify-content: center;
   gap: 4em;
-  background-color: coral;
+  /* background-color: coral; */
+  background-color: var(--col-dark80);
 }
 
 a {
@@ -15,12 +16,12 @@ a {
 *The Animated underline code below
 */
 .navlinks {
-  color: white;
+  color: var(--col-dark10);
   padding: 1.2em 0em;
   margin: 0px 20px;
   display: inline-block;
   position: relative;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 .navlinks:hover {
   opacity: 1;
