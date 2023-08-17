@@ -5,6 +5,8 @@
   padding: 1em;
   color: black;
   text-align: center;
+}
+.fancyheadings {
   font-family: "Barriecito", cursive;
 }
 .categoryButtons {
