@@ -1,16 +1,27 @@
 nav {
   /* width: 1200px; */
   /* position: fixed; */
+  display: flex;
   padding: 1em;
+  background-color: var(--col-dark80);
+
+  /* background-color: coral; */
+}
+.linkcontainer {
+  margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 4em;
-  /* background-color: coral; */
-  background-color: var(--col-dark80);
 }
 
 a {
   text-decoration: none;
+}
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
 }
 /*
 *The Animated underline code below

@@ -5,21 +5,26 @@ import styles from "./navigation.module.css";
 const Navigation = () => {
   return (
     <nav>
-      <Link className={`${styles.navlinks} ${styles.navlinksfadeup}`} to="/">
-        Home
+      <Link to="/">
+        <img src="src/images/Frame 1.png" alt="" className={styles.logo} />
       </Link>
-      <Link
-        className={`${styles.navlinks} ${styles.navlinksfadeup}`}
-        to="/step2"
-      >
-        Cart
-      </Link>
-      <Link
-        className={`${styles.navlinks} ${styles.navlinksfadeup}`}
-        to="/aboutproject"
-      >
-        About
-      </Link>
+      <div className={styles.linkcontainer}>
+        <Link className={`${styles.navlinks} ${styles.navlinksfadeup}`} to="/">
+          Home
+        </Link>
+        <Link
+          className={`${styles.navlinks} ${styles.navlinksfadeup}`}
+          to="/step2"
+        >
+          Cart
+        </Link>
+        <Link
+          className={`${styles.navlinks} ${styles.navlinksfadeup}`}
+          to="/aboutproject"
+        >
+          About
+        </Link>
+      </div>
     </nav>
   );
 };
