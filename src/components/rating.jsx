@@ -21,12 +21,14 @@ const RenderStars = ({ rating, ratingcount }) => {
 
         return (
           <span key={index} className={`${styles.star} ${styles[starType]}`}>
-            {starType === "filled-star" && <i className="fa-solid fa-star"></i>}
+            {starType === "filled-star" && (
+              <i className=" fa-solid fa-star"></i>
+            )}
             {starType === "half-filled-star" && (
-              <i className="fa-solid fa-star-half-stroke"></i>
+              <i className=" fa-solid fa-star-half-stroke"></i>
             )}
             {starType === "empty-star" && (
-              <i className="fa-regular fa-star"></i>
+              <i className=" fa-regular fa-star"></i>
             )}
           </span>
         );

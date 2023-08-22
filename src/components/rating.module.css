@@ -3,13 +3,16 @@
 .rating {
   display: inline-block;
   font-size: 0.8em;
+  align-items: center;
 }
 
 .star {
-  color: #f0c935; /* Color for unfilled stars */
+  /* color: #f0c935;  */
+  color: var(--color-bgblack);
   margin-right: 4px; /* Adjust spacing between stars */
+  font-size: 3em;
 }
 
 .filled-star {
-  color: #ffda44; /* Color for filled stars */
+  /* color: #ffda44;  */
 }

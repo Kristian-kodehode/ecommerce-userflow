@@ -62,21 +62,21 @@ const Step1 = () => {
             <div key={product.id} className={styles.productCard}>
               <div>
                 <img src={product.image} alt="" />
-                <div className={styles.priceAndRating}>
-                  <h6 className={styles.cardCategory}>{product.category}</h6>
-
-                  <RenderStars
-                    rating={product.rating.rate}
-                    ratingcount={product.rating.count}
-                  />
+                <div className={styles.headingandcategory}>
+                  <div className={styles.cardCategory}>{product.category}</div>
+                  <h6 className={styles.cardTitle}>{product.title}</h6>
                 </div>
               </div>
 
-              <div className={styles.cardTitleAndPrice}>
-                <h4 className={styles.cardTitle}>{product.title}</h4>
+              <div className={styles.priceandrating}>
                 <h4 className={styles.cardPrice}>$ {product.price}</h4>
+
+                <RenderStars
+                  rating={product.rating.rate}
+                  ratingcount={product.rating.count}
+                />
               </div>
-              <div className={styles.ctaButtons}>
+              {/* <div className={styles.ctaButtons}>
                 <button
                   className={styles.buttonAdd}
                   onClick={() => handleAddToCart(product)}
@@ -84,7 +84,7 @@ const Step1 = () => {
                   Add to cart
                 </button>
                 <button className={styles.buttonInfo}>Info</button>
-              </div>
+              </div> */}
             </div>
           );
         })}

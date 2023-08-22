@@ -4,7 +4,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   padding: 1em;
-  background-color: var(--col-dark80);
+  background-color: var(--color-bgblack);
   /* height: 160px; */
   text-align: center;
   /* background-color: coral; */
