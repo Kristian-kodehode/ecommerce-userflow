@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../../CartContext";
+// import { useCart } from "../../CartContext";
 import styles from "./step1.module.css";
 import RenderStars from "../../components/rating.jsx";
 
 const Step1 = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  // const [selectedItems, setSelectedItems] = useState([]);
-  const { setSelectedItems } = useCart();
+  // const { setSelectedItems } = useCart();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -56,7 +55,11 @@ const Step1 = () => {
               <Link to={`/itemPage/${product.id}`} key={product.id}>
                 <div key={product.id} className={styles.productCard}>
                   <div>
-                    <img src={product.image} alt="" />
+                    <img
+                      src={product.image}
+                      className={styles.imagestep1}
+                      alt=""
+                    />
                     <div className={styles.headingandcategory}>
                       <div className={styles.cardCategory}>
                         {product.category}
@@ -86,22 +89,3 @@ const Step1 = () => {
 };
 
 export default Step1;
-
-// const handleAddToCart = (product) => {
-//   setSelectedItems((prevItems) => {
-//     return [...prevItems, product];
-//   });
-//   console.log(product);
-// };
-
-{
-  /* <div className={styles.ctaButtons}>
-                  <button
-                    className={styles.buttonAdd}
-                    onClick={() => handleAddToCart(product)}
-                  >
-                    Add to cart
-                  </button>
-                  <button className={styles.buttonInfo}>Info</button>
-                </div> */
-}
