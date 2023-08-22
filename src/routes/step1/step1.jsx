@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { useCart } from "../../CartContext";
+import { useCart } from "../../CartContext";
 import styles from "./step1.module.css";
 import RenderStars from "../../components/rating.jsx";
 
 const Step1 = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  // const { setSelectedItems } = useCart();
+  const { setSelectedItems } = useCart();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
