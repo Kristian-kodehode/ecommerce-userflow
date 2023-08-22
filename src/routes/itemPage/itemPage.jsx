@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useCart } from "../../CartContext";
 import styles from "./itemPage.module.css";
 import RenderStars from "../../components/rating";
@@ -33,6 +33,10 @@ const ItemPage = () => {
   return (
     <>
       <div className={styles.itempagecontainer}>
+        <Link className={styles.itempagecategory} to="/">
+          {" "}
+          {product.category}
+        </Link>
         <div className={styles.itemcontainer}>
           <img className={styles.itemimage} src={product.image} alt="" />
           <div>
