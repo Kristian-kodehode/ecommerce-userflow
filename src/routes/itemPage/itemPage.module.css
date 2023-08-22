@@ -1,0 +1,41 @@
+.itempagecontainer {
+  gap: 1em;
+  /* padding-top: 1em; */
+  padding: 2em 1em;
+}
+
+.itemimage {
+  width: 100%;
+}
+.itemcontainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1em;
+}
+.desktoptext {
+  display: none;
+}
+.mobiletext {
+  margin-top: 1em;
+  display: grid;
+  gap: 1em;
+}
+.priceandrating {
+  margin-top: 3em;
+  display: grid;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .itemcontainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .desktoptext {
+    display: grid;
+    gap: 1em;
+  }
+  .mobiletext {
+    display: none;
+  }
+}

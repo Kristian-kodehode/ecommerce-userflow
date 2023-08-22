@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../../CartContext";
+import styles from "./itemPage.module.css";
+import RenderStars from "../../components/rating";
 
 const ItemPage = () => {
   const { itemId } = useParams();
@@ -29,14 +31,34 @@ const ItemPage = () => {
   }
 
   return (
-    <div>
-      <img src={product.image} alt="" />
-      <h2>{product.title}</h2>
-      <p>{product.description}</p>
-      <button className="buttonadd" onClick={handleAddToCart}>
-        Add to cart
-      </button>
-    </div>
+    <>
+      <div className={styles.itempagecontainer}>
+        <div className={styles.itemcontainer}>
+          <img className={styles.itemimage} src={product.image} alt="" />
+          <div>
+            {" "}
+            <div className={styles.desktoptext}>
+              <h2>{product.title}</h2>
+              <p>{product.description}</p>
+            </div>
+            <div className={styles.priceandrating}>
+              <h1>$ {product.price}</h1>
+              <RenderStars
+                rating={product.rating.rate}
+                ratingcount={product.rating.count}
+              />
+            </div>
+            <button className="buttonadd" onClick={handleAddToCart}>
+              Add to cart
+            </button>
+            <div className={styles.mobiletext}>
+              <h2>{product.title}</h2>
+              <p>{product.description}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

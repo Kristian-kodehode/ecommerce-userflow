@@ -44,7 +44,8 @@ body {
 
 .buttonadd {
   border: none;
-  padding: 1em;
+  font-size: 1rem;
+  padding: 1.25em;
   font-weight: 700;
   text-align: center;
   background-color: var(--color-bgblack);
