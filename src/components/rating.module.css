@@ -10,7 +10,7 @@
   /* color: #f0c935;  */
   color: var(--color-bgblack);
   margin-right: 4px; /* Adjust spacing between stars */
-  font-size: 3em;
+  font-size: 0.75em;
 }
 
 .filled-star {

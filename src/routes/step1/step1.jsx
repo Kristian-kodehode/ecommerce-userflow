@@ -68,13 +68,20 @@ const Step1 = () => {
                 </div>
               </div>
 
-              <div className={styles.priceandrating}>
-                <h4 className={styles.cardPrice}>$ {product.price}</h4>
-
-                <RenderStars
-                  rating={product.rating.rate}
-                  ratingcount={product.rating.count}
-                />
+              <div className={styles.priceandcta}>
+                <div className={styles.priceandrating}>
+                  <h4 className={styles.cardPrice}>$ {product.price}</h4>
+                  <RenderStars
+                    rating={product.rating.rate}
+                    ratingcount={product.rating.count}
+                  />
+                </div>
+                <button
+                  className={styles.buttonAdd}
+                  onClick={() => handleAddToCart(product)}
+                >
+                  Add to cart
+                </button>
               </div>
               {/* <div className={styles.ctaButtons}>
                 <button

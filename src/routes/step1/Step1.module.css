@@ -41,11 +41,11 @@
 
 .productCard {
   /* height: 400px; */
-  height: 337px;
+  height: 350px;
   width: 350px;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 1.25em;
   padding: 1em;
   border: 1px solid #ddd;
   background-color: #fff;
@@ -63,11 +63,11 @@ img:hover {
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-.ctaButtons {
+/* .ctaButtons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: 1px solid var(--col-dark80);
-}
+} */
 
 .buttonAdd,
 .buttonInfo {
@@ -102,12 +102,6 @@ img:hover {
   font-weight: 700;
 }
 
-.priceandrating {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 0.4em;
-}
-
 .cardTitle {
   min-height: 32px;
   display: -webkit-box;
@@ -119,14 +113,23 @@ img:hover {
   color: #272829;
   cursor: pointer;
   transition: 0.2s;
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 700;
 }
 .cardTitle:hover {
   text-decoration: underline;
   letter-spacing: 1px;
 }
+
+.priceandcta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.priceandrating {
+  gap: 0.4em;
+}
 .cardPrice {
-  color: coral;
+  /* color: coral; */
+  color: var(--color-bgblack);
   font-size: 1.6em;
 }
