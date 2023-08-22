@@ -72,22 +72,7 @@ const Step1 = () => {
                         ratingcount={product.rating.count}
                       />
                     </div>
-                    <button
-                      className={styles.buttonAdd}
-                      onClick={() => handleAddToCart(product)}
-                    >
-                      Add to cart
-                    </button>
                   </div>
-                  {/* <div className={styles.ctaButtons}>
-                  <button
-                    className={styles.buttonAdd}
-                    onClick={() => handleAddToCart(product)}
-                  >
-                    Add to cart
-                  </button>
-                  <button className={styles.buttonInfo}>Info</button>
-                </div> */}
                 </div>
               </Link>
             </>
@@ -108,3 +93,15 @@ export default Step1;
 //   });
 //   console.log(product);
 // };
+
+{
+  /* <div className={styles.ctaButtons}>
+                  <button
+                    className={styles.buttonAdd}
+                    onClick={() => handleAddToCart(product)}
+                  >
+                    Add to cart
+                  </button>
+                  <button className={styles.buttonInfo}>Info</button>
+                </div> */
+}

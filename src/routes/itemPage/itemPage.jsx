@@ -21,6 +21,7 @@ const ItemPage = () => {
     if (product) {
       addToCart(product);
     }
+    console.log("Clicked");
   };
 
   if (!product) {
