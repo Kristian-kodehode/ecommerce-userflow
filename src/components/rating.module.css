@@ -2,12 +2,11 @@
 
 .rating,
 .star {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .rating {
   display: inline-block;
-
   align-items: center;
 }
 
@@ -17,13 +16,5 @@
   margin-right: 4px; /* Adjust spacing between stars */
 }
 
-.filled-star {
-  /* color: #ffda44;  */
-}
-
 @media only screen and (min-width: 768px) {
-  .rating,
-  .star {
-    font-size: 0.9rem;
-  }
 }
