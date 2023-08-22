@@ -5,9 +5,6 @@ import styles from "./navigation.module.css";
 const Navigation = () => {
   return (
     <nav>
-      <Link to="/">
-        <img src="src/images/Frame 1.png" alt="" className={styles.logo} />
-      </Link>
       <div className={styles.linkcontainer}>
         <Link className={`${styles.navlinks} ${styles.navlinksfadeup}`} to="/">
           Home
