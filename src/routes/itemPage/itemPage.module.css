@@ -2,16 +2,22 @@
   gap: 1em;
   /* padding-top: 1em; */
   padding: 2em 1em;
+  /* background-color: pink; */
 }
 .itempagecategory {
   color: var(--color-grey8b);
   padding: 1em 1em 2em 1em;
   text-decoration: underline;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .itemimage {
   width: 100%;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+
+  /* max-width: 800px; */
+  /* max-height: 600px; */
 }
 .itemcontainer {
   display: grid;

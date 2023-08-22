@@ -9,12 +9,41 @@ export const CartProvider = ({ children }) => {
     setSelectedItems((prevItems) => [...prevItems, product]);
   };
 
-  //Placeholder for a function to empty cart
-  // const emptyCart = () => {}
+  const handleIncreaseQuantity = (productId) => {
+    setSelectedItems((prevItems) => {
+      const updatedItems = prevItems.map((item) => {
+        if (item.id === productId) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
+      return updatedItems;
+    });
+    console.log("increase");
+  };
+
+  const handleDecreaseQuantity = (productId) => {
+    setSelectedItems((prevItems) => {
+      const updatedItems = prevItems.map((item) => {
+        if (item.id === productId && item.quantity > 0) {
+          return { ...item, quantity: item.quantity - 1 };
+        }
+        return item;
+      });
+      return updatedItems;
+    });
+    console.log("decrease");
+  };
 
   return (
     <CartContext.Provider
-      value={{ selectedItems, setSelectedItems, addToCart }}
+      value={{
+        selectedItems,
+        setSelectedItems,
+        addToCart,
+        handleIncreaseQuantity,
+        handleDecreaseQuantity,
+      }}
     >
       {children}
     </CartContext.Provider>

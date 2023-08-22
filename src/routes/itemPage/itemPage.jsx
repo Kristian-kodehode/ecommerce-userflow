@@ -3,11 +3,17 @@ import { useParams, Link } from "react-router-dom";
 import { useCart } from "../../CartContext";
 import styles from "./itemPage.module.css";
 import RenderStars from "../../components/rating";
+// import { preview } from "vite";
 
 const ItemPage = () => {
   const { itemId } = useParams();
   const [product, setProduct] = useState(null);
-  const { addToCart } = useCart();
+  const {
+    addToCart,
+    selectedItems,
+    handleIncreaseQuantity,
+    handleDecreaseQuantity,
+  } = useCart();
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${itemId}`)
@@ -23,7 +29,7 @@ const ItemPage = () => {
     if (product) {
       addToCart(product);
     }
-    console.log("Clicked");
+    console.log("Product added to cart");
   };
 
   if (!product) {
@@ -52,13 +58,26 @@ const ItemPage = () => {
                 ratingcount={product.rating.count}
               />
             </div>
-            <button className="buttonadd" onClick={handleAddToCart}>
-              Add to cart
-            </button>
-            <div className={styles.mobiletext}>
-              <h2>{product.title}</h2>
-              <p>{product.description}</p>
+            <div>
+              <button className="buttonadd" onClick={handleAddToCart}>
+                Add to cart
+              </button>
+              <div>
+                Quantity:{" "}
+                {selectedItems.find((item) => item.id === product.id)
+                  ?.quantity || 0}
+              </div>
+              <button onClick={() => handleDecreaseQuantity(product.id)}>
+                -
+              </button>
+              <button onClick={() => handleIncreaseQuantity(product.id)}>
+                +
+              </button>
             </div>
+          </div>
+          <div className={styles.mobiletext}>
+            <h2>{product.title}</h2>
+            <p>{product.description}</p>
           </div>
         </div>
       </div>

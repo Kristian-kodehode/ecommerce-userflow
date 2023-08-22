@@ -1,8 +1,13 @@
 /* Rating.css */
 
+.rating,
+.star {
+  font-size: 0.8rem;
+}
+
 .rating {
   display: inline-block;
-  font-size: 0.8em;
+
   align-items: center;
 }
 
@@ -10,9 +15,15 @@
   /* color: #f0c935;  */
   color: var(--color-bgblack);
   margin-right: 4px; /* Adjust spacing between stars */
-  font-size: 0.75em;
 }
 
 .filled-star {
   /* color: #ffda44;  */
+}
+
+@media only screen and (min-width: 768px) {
+  .rating,
+  .star {
+    font-size: 0.9rem;
+  }
 }
