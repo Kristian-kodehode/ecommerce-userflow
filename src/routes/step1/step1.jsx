@@ -28,13 +28,6 @@ const Step1 = () => {
     ...Array.from(new Set(products.map((product) => product.category))),
   ];
 
-  // const handleAddToCart = (product) => {
-  //   setSelectedItems((prevItems) => {
-  //     return [...prevItems, product];
-  //   });
-  //   console.log(product);
-  // };
-
   return (
     <div className={styles.step1Container}>
       <div className={styles.headingscontainer}>
@@ -108,3 +101,10 @@ const Step1 = () => {
 };
 
 export default Step1;
+
+// const handleAddToCart = (product) => {
+//   setSelectedItems((prevItems) => {
+//     return [...prevItems, product];
+//   });
+//   console.log(product);
+// };

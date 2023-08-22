@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useCart } from "../../CartContext";
 
 const ItemPage = () => {
   const { itemId } = useParams();
   const [product, setProduct] = useState(null);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${itemId}`)
@@ -15,6 +17,12 @@ const ItemPage = () => {
       .catch((error) => console.error("Error fetching product data:", error));
   }, [itemId]);
 
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart(product);
+    }
+  };
+
   if (!product) {
     return <div>Loading...</div>;
   }
@@ -23,7 +31,7 @@ const ItemPage = () => {
     <div>
       {/* Display detailed information about the product */}
       <h2>{product.title}</h2>
-      <button>Add to cart</button>
+      <button onClick={handleAddToCart}>Add to cart</button>
       {/* Display other product details */}
     </div>
   );
