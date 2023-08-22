@@ -39,10 +39,13 @@ const ItemPage = () => {
   return (
     <>
       <div className={styles.itempagecontainer}>
-        <Link className={styles.itempagecategory} to="/">
-          {" "}
-          {product.category}
-        </Link>
+        <span className={styles.itempagedirection}>
+          <Link className={styles.itempagecategory} to="/">
+            {" "}
+            Go back
+          </Link>
+          <div>{product.category}</div>
+        </span>
         <div className={styles.itemcontainer}>
           <img className={styles.itemimage} src={product.image} alt="" />
           <div>

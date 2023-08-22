@@ -6,16 +6,20 @@
 }
 .itempagecategory {
   color: var(--color-grey8b);
-  padding: 1em 1em 2em 1em;
+
   text-decoration: underline;
   /* background-color: pink; */
+}
+.itempagedirection {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
 }
 
 .itemimage {
   width: 100%;
   object-fit: contain;
   aspect-ratio: 1/1;
-
   /* max-width: 800px; */
   /* max-height: 600px; */
 }
@@ -44,11 +48,15 @@
   .itemcontainer {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .desktoptext {
     display: grid;
     gap: 1em;
   }
   .mobiletext {
     display: none;
+  }
+  .itempagecategory {
+    padding: 1em 1em 2em 1em;
   }
 }
