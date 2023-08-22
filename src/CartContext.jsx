@@ -9,10 +9,10 @@ export const CartProvider = ({ children }) => {
     setSelectedItems((prevItems) => [...prevItems, product]);
   };
 
-  const handleIncreaseQuantity = (productId) => {
+  const handleIncreaseQuantity = () => {
     setSelectedItems((prevItems) => {
       const updatedItems = prevItems.map((item) => {
-        if (item.id === productId) {
+        if (item.id === product.id) {
           return { ...item, quantity: item.quantity + 1 };
         }
         return item;
@@ -22,10 +22,10 @@ export const CartProvider = ({ children }) => {
     console.log("increase");
   };
 
-  const handleDecreaseQuantity = (productId) => {
+  const handleDecreaseQuantity = () => {
     setSelectedItems((prevItems) => {
       const updatedItems = prevItems.map((item) => {
-        if (item.id === productId && item.quantity > 0) {
+        if (item.id === product.id && item.quantity > 0) {
           return { ...item, quantity: item.quantity - 1 };
         }
         return item;
