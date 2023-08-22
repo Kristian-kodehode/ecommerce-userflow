@@ -13,6 +13,11 @@
   --col-dark20: #c8c8c8;
   --col-dark10: #fafafa;
   --col-cta1: #3d6cfc;
+  --color-black: #111111;
+  --color-bodytext: #555555;
+  --color-grey8b: #8b8b8b;
+  --color-pleasantblack: #333333;
+  --color-newwhite: #fcfcfc;
 }
 
 html {
