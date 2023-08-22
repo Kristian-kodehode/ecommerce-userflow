@@ -28,12 +28,12 @@ const Step1 = () => {
     ...Array.from(new Set(products.map((product) => product.category))),
   ];
 
-  const handleAddToCart = (product) => {
-    setSelectedItems((prevItems) => {
-      return [...prevItems, product];
-    });
-    console.log(product);
-  };
+  // const handleAddToCart = (product) => {
+  //   setSelectedItems((prevItems) => {
+  //     return [...prevItems, product];
+  //   });
+  //   console.log(product);
+  // };
 
   return (
     <div className={styles.step1Container}>
@@ -59,40 +59,45 @@ const Step1 = () => {
       <ul className={styles.productList}>
         {filteredProducts.map((product) => {
           return (
-            <div key={product.id} className={styles.productCard}>
-              <div>
-                <img src={product.image} alt="" />
-                <div className={styles.headingandcategory}>
-                  <div className={styles.cardCategory}>{product.category}</div>
-                  <h6 className={styles.cardTitle}>{product.title}</h6>
+            <>
+              <Link to={`/itemPage/${product.id}`} key={product.id}>
+                <div key={product.id} className={styles.productCard}>
+                  <div>
+                    <img src={product.image} alt="" />
+                    <div className={styles.headingandcategory}>
+                      <div className={styles.cardCategory}>
+                        {product.category}
+                      </div>
+                      <h6 className={styles.cardTitle}>{product.title}</h6>
+                    </div>
+                  </div>
+                  <div className={styles.priceandcta}>
+                    <div className={styles.priceandrating}>
+                      <h4 className={styles.cardPrice}>$ {product.price}</h4>
+                      <RenderStars
+                        rating={product.rating.rate}
+                        ratingcount={product.rating.count}
+                      />
+                    </div>
+                    <button
+                      className={styles.buttonAdd}
+                      onClick={() => handleAddToCart(product)}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                  {/* <div className={styles.ctaButtons}>
+                  <button
+                    className={styles.buttonAdd}
+                    onClick={() => handleAddToCart(product)}
+                  >
+                    Add to cart
+                  </button>
+                  <button className={styles.buttonInfo}>Info</button>
+                </div> */}
                 </div>
-              </div>
-
-              <div className={styles.priceandcta}>
-                <div className={styles.priceandrating}>
-                  <h4 className={styles.cardPrice}>$ {product.price}</h4>
-                  <RenderStars
-                    rating={product.rating.rate}
-                    ratingcount={product.rating.count}
-                  />
-                </div>
-                <button
-                  className={styles.buttonAdd}
-                  onClick={() => handleAddToCart(product)}
-                >
-                  Add to cart
-                </button>
-              </div>
-              {/* <div className={styles.ctaButtons}>
-                <button
-                  className={styles.buttonAdd}
-                  onClick={() => handleAddToCart(product)}
-                >
-                  Add to cart
-                </button>
-                <button className={styles.buttonInfo}>Info</button>
-              </div> */}
-            </div>
+              </Link>
+            </>
           );
         })}
       </ul>

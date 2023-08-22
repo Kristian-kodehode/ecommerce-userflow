@@ -8,6 +8,7 @@ import Step2 from "./routes/step2/step2.jsx";
 import Step3 from "./routes/step3/step3.jsx";
 import Step4 from "./routes/step4/step4.route.jsx";
 import AboutProject from "./routes/aboutproject/aboutproject";
+import ItemPage from "./routes/itemPage/itemPage.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/step3" element={<Step3 />} />
           <Route path="/step4" element={<Step4 />} />
           <Route path="/aboutproject" element={<AboutProject />} />
+          <Route path="/itemPage/:itemId" element={<ItemPage />} />
         </Route>
       </Routes>
     </CartProvider>
