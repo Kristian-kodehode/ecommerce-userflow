@@ -9,6 +9,9 @@ export const CartProvider = ({ children }) => {
     setSelectedItems((prevItems) => [...prevItems, product]);
   };
 
+  //Placeholder for a function to empty cart
+  // const emptyCart = () => {}
+
   return (
     <CartContext.Provider
       value={{ selectedItems, setSelectedItems, addToCart }}
