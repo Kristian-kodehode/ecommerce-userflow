@@ -32,7 +32,9 @@ const Step2 = () => {
       </ul>
       <h2>Total Amount: $ {totalAmount.toFixed(2)}</h2>
 
-      <Link to="/step3">Pay in step3</Link>
+      <Link to="/step3">
+        <button>Go to checkout</button>{" "}
+      </Link>
     </div>
   );
 };
