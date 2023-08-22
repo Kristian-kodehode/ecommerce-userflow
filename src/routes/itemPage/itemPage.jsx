@@ -30,12 +30,12 @@ const ItemPage = () => {
 
   return (
     <div>
-      {/* Display detailed information about the product */}
       <img src={product.image} alt="" />
       <h2>{product.title}</h2>
       <p>{product.description}</p>
-      <button onClick={handleAddToCart}>Add to cart</button>
-      {/* Display other product details */}
+      <button className="buttonadd" onClick={handleAddToCart}>
+        Add to cart
+      </button>
     </div>
   );
 };

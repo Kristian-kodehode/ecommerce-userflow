@@ -41,3 +41,17 @@ body {
   -webkit-backdrop-filter: blur(30px);
   /* box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1); */
 }
+
+.buttonadd {
+  border: none;
+  padding: 1em;
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--color-bgblack);
+  color: var(--color-newwhite);
+  width: 100%;
+  cursor: pointer;
+}
+.buttonadd:hover {
+  text-decoration: underline;
+}
