@@ -1,6 +1,7 @@
 // import React from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../../CartContext";
+import styles from "./step2.module.css";
 
 const Step2 = () => {
   const { selectedItems, setSelectedItems } = useCart([]);
@@ -18,7 +19,7 @@ const Step2 = () => {
 
   console.log(selectedItems);
   return (
-    <div>
+    <div className={styles.pagecontainer}>
       <h1>Step 2: Shoppingcart</h1>
       {/* List of cart items below in ul */}
       <ul>
@@ -26,14 +27,24 @@ const Step2 = () => {
           <li key={index}>
             <img src={item.image} alt="" />
             {item.title} - ${item.price}
-            <button onClick={() => handleRemove(item.id)}>remove item</button>
+            <button
+              className="buttonadd secondary"
+              onClick={() => handleRemove(item.id)}
+            >
+              <i className="fa-solid fa-trash-can"></i> Remove item
+            </button>
           </li>
         ))}
       </ul>
       <h2>Total Amount: $ {totalAmount.toFixed(2)}</h2>
 
       <Link to="/step3">
-        <button>Go to checkout</button>{" "}
+        <button className="buttonadd">
+          {" "}
+          {/* <i className="fa-solid fa-credit-card"></i> */}
+          Go to checkout
+          <i className="fa-solid fa-arrow-right displayhover"></i>
+        </button>{" "}
       </Link>
     </div>
   );
