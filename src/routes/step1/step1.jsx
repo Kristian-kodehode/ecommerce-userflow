@@ -19,6 +19,7 @@ const Step1 = () => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
+  //Product Filtering With Buttons
   const filteredProducts = selectedCategory
     ? products.filter((product) => product.category === selectedCategory)
     : products;

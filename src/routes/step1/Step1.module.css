@@ -6,9 +6,9 @@
   color: black;
   text-align: center;
 }
-.fancyheadings {
-  font-family: "Barriecito", cursive;
-}
+/* .fancyheadings {
+  font-family: "Bricolage Grotesque", sans-serif;
+} */
 .categoryButtons {
   display: flex;
   flex-wrap: wrap;

@@ -55,7 +55,7 @@ const ItemPage = () => {
               <p>{product.description}</p>
             </div>
             <div className={styles.priceandrating}>
-              <h1>$ {product.price}</h1>
+              <h2>$ {product.price}</h2>
               <RenderStars
                 rating={product.rating.rate}
                 ratingcount={product.rating.count}
@@ -65,7 +65,7 @@ const ItemPage = () => {
               <button className="buttonadd" onClick={handleAddToCart}>
                 Add to cart
               </button>
-              <div>
+              {/* <div>
                 Quantity:{" "}
                 {selectedItems.find((item) => item.id === product.id)
                   ?.quantity || 0}
@@ -75,7 +75,7 @@ const ItemPage = () => {
               </button>
               <button onClick={() => handleIncreaseQuantity(product.id)}>
                 +
-              </button>
+              </button> */}
             </div>
           </div>
           <div className={styles.mobiletext}>

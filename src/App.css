@@ -21,15 +21,19 @@
 }
 
 html {
-  /* background-color: antiquewhite; */
-  font-family: "Barriecito", cursive;
-  font-family: "Work Sans", sans-serif;
+  /* font-family: "Bricolage Grotesque", sans-serif; */
+  font-family: "Inter", sans-serif;
+  /* font-family: "Work Sans", sans-serif; */
   background-color: white;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 html::-webkit-scrollbar {
   display: none;
+}
+
+h1 {
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 body {
