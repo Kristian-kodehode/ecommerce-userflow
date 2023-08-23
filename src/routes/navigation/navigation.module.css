@@ -1,6 +1,8 @@
 nav {
   /* width: 1200px; */
   /* position: fixed; */
+  /* top: 0; */
+  /* width: 100%; */
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   padding: 1em;
