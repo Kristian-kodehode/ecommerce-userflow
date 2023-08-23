@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav>
       <div className={styles.linkcontainer}>
         <Link className={`${styles.navlinks} ${styles.navlinksfadeup}`} to="/">
-          Home
+          Shop
         </Link>
         <Link
           className={`${styles.navlinks} ${styles.navlinksfadeup}`}
