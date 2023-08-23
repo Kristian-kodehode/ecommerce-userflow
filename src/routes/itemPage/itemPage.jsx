@@ -29,7 +29,7 @@ const ItemPage = () => {
     if (product) {
       addToCart(product);
     }
-    console.log("Product added to cart");
+    console.log("Product added to cart from ItemPage");
   };
 
   if (!product) {
