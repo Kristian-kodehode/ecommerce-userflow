@@ -56,6 +56,11 @@ body {
   color: var(--color-newwhite);
   width: 100%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
 }
 .buttonadd:hover {
   text-decoration: underline;

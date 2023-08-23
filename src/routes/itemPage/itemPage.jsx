@@ -63,7 +63,7 @@ const ItemPage = () => {
             </div>
             <div>
               <button className="buttonadd" onClick={handleAddToCart}>
-                Add to cart
+                <i className="fa-solid fa-cart-plus "></i> Add to cart
               </button>
               {/* <div>
                 Quantity:{" "}
