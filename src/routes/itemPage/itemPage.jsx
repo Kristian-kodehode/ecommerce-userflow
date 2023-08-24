@@ -60,17 +60,6 @@ const ItemPage = () => {
               <button className="buttonadd" onClick={handleAddToCart}>
                 <i className="fa-solid fa-cart-plus "></i> Add to cart
               </button>
-              {/* <div>
-                Quantity:{" "}
-                {selectedItems.find((item) => item.id === product.id)
-                  ?.quantity || 0}
-              </div>
-              <button onClick={() => handleDecreaseQuantity(product.id)}>
-                -
-              </button>
-              <button onClick={() => handleIncreaseQuantity(product.id)}>
-                +
-              </button> */}
             </div>
           </div>
           <div className={styles.mobiletext}>

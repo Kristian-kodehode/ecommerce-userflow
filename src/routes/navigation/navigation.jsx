@@ -1,8 +1,10 @@
 // import React from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../../CartContext";
 import styles from "./navigation.module.css";
 
 const Navigation = () => {
+  const { selectedItems, setSelectedItems } = useCart([]);
   return (
     <nav>
       <div className={styles.linkcontainer}>
@@ -13,7 +15,7 @@ const Navigation = () => {
           className={`${styles.navlinks} ${styles.navlinksfadeup}`}
           to="/step2"
         >
-          Cart
+          Cart {selectedItems.length > 0 ? `(${selectedItems.length})` : ""}
         </Link>
         <Link
           className={`${styles.navlinks} ${styles.navlinksfadeup}`}

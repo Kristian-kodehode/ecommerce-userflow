@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useCart } from "../../CartContext";
 import styles from "./step1.module.css";
 import RenderStars from "../../components/rating.jsx";
@@ -7,7 +8,8 @@ import RenderStars from "../../components/rating.jsx";
 const Step1 = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const { setSelectedItems } = useCart();
+  const { addToCart, selectedItems, setSelectedItems } = useCart();
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -27,6 +29,13 @@ const Step1 = () => {
     "Show All",
     ...Array.from(new Set(products.map((product) => product.category))),
   ];
+
+  const handleAddToCart = (product) => {
+    if (product) {
+      addToCart(product);
+    }
+    console.log("Product added to cart from ItemPage");
+  };
 
   return (
     <div className={styles.step1Container}>
@@ -53,8 +62,8 @@ const Step1 = () => {
         {filteredProducts.map((product) => {
           return (
             <>
-              <Link to={`/itemPage/${product.id}`} key={product.id}>
-                <div key={product.id} className={styles.productCard}>
+              <div key={product.id} className={styles.productCard}>
+                <Link to={`/itemPage/${product.id}`} key={product.id}>
                   <div>
                     <img
                       src={product.image}
@@ -68,17 +77,20 @@ const Step1 = () => {
                       <h6 className={styles.cardTitle}>{product.title}</h6>
                     </div>
                   </div>
-                  <div className={styles.priceandcta}>
-                    <div className={styles.priceandrating}>
-                      <h4 className={styles.cardPrice}>$ {product.price}</h4>
-                      <RenderStars
-                        rating={product.rating.rate}
-                        ratingcount={product.rating.count}
-                      />
-                    </div>
+                </Link>
+                <div className={styles.priceandcta}>
+                  <div className={styles.priceandrating}>
+                    <h4 className={styles.cardPrice}>$ {product.price}</h4>
+                    <RenderStars
+                      rating={product.rating.rate}
+                      ratingcount={product.rating.count}
+                    />
                   </div>
+                  <button onClick={() => handleAddToCart(product)}>
+                    Add Cart
+                  </button>
                 </div>
-              </Link>
+              </div>
             </>
           );
         })}

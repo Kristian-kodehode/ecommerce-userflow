@@ -6,33 +6,13 @@ export const CartProvider = ({ children }) => {
   const [selectedItems, setSelectedItems] = useState([]);
 
   const addToCart = (product) => {
-    setSelectedItems((prevItems) => [...prevItems, product]);
-  };
-
-  const handleIncreaseQuantity = () => {
-    setSelectedItems((prevItems) => {
-      const updatedItems = prevItems.map((item) => {
-        if (item.id === product.id) {
-          return { ...item, quantity: item.quantity + 1 };
-        }
-        return item;
-      });
-      return updatedItems;
-    });
-    console.log("increase");
-  };
-
-  const handleDecreaseQuantity = () => {
-    setSelectedItems((prevItems) => {
-      const updatedItems = prevItems.map((item) => {
-        if (item.id === product.id && item.quantity > 0) {
-          return { ...item, quantity: item.quantity - 1 };
-        }
-        return item;
-      });
-      return updatedItems;
-    });
-    console.log("decrease");
+    //Can use some method instead of find. gpt means some is more correct
+    const isAlreadyInCart = selectedItems.find(
+      (item) => item.id === product.id
+    );
+    if (!isAlreadyInCart) {
+      setSelectedItems((prevItems) => [...prevItems, product]);
+    }
   };
 
   return (
@@ -41,8 +21,6 @@ export const CartProvider = ({ children }) => {
         selectedItems,
         setSelectedItems,
         addToCart,
-        handleIncreaseQuantity,
-        handleDecreaseQuantity,
       }}
     >
       {children}

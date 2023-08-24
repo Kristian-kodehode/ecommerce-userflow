@@ -6,7 +6,7 @@ import styles from "./step2.module.css";
 const Step2 = () => {
   const { selectedItems, setSelectedItems } = useCart([]);
 
-  const handleRemove = (productId) => {
+  const handleRemoveItem = (productId) => {
     setSelectedItems((prevItems) => {
       return prevItems.filter((item) => item.id !== productId);
     });
@@ -16,6 +16,10 @@ const Step2 = () => {
     (total, item) => total + item.price,
     0
   );
+
+  const handleClearCart = () => {
+    setSelectedItems([]);
+  };
 
   console.log(selectedItems);
   return (
@@ -29,7 +33,7 @@ const Step2 = () => {
             {item.title} - ${item.price}
             <button
               className="buttonadd secondary"
-              onClick={() => handleRemove(item.id)}
+              onClick={() => handleRemoveItem(item.id)}
             >
               <i className="fa-solid fa-trash-can"></i> Remove item
             </button>
@@ -45,6 +49,7 @@ const Step2 = () => {
           <i className="fa-solid fa-arrow-right displayhover"></i>
         </button>{" "}
       </Link>
+      <button onClick={handleClearCart}>Clear Cart</button>
     </div>
   );
 };
