@@ -31,7 +31,7 @@ const Step1 = () => {
   return (
     <div className={styles.step1Container}>
       <div className={styles.headingscontainer}>
-        <h1 className={styles.fancyheadings}>Products</h1>
+        <h1>Products</h1>
         <h6>Select your products</h6>
       </div>
       <div className={styles.categoryButtons}>

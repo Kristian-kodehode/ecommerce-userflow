@@ -20,7 +20,7 @@ const Step2 = () => {
   console.log(selectedItems);
   return (
     <div className={styles.pagecontainer}>
-      <h1>Step 2: Shoppingcart</h1>
+      <h1>Shoppingcart</h1>
       {/* List of cart items below in ul */}
       <ul>
         {selectedItems.map((item, index) => (
@@ -38,10 +38,9 @@ const Step2 = () => {
       </ul>
       <h2>Total Amount: $ {totalAmount.toFixed(2)}</h2>
 
-      <Link to="/step3">
+      <Link to="/step3" className="hoverlink">
         <button className="buttonadd">
           {" "}
-          {/* <i className="fa-solid fa-credit-card"></i> */}
           Go to checkout
           <i className="fa-solid fa-arrow-right displayhover"></i>
         </button>{" "}
