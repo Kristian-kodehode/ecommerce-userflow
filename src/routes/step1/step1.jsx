@@ -86,8 +86,12 @@ const Step1 = () => {
                       ratingcount={product.rating.count}
                     />
                   </div>
-                  <button onClick={() => handleAddToCart(product)}>
-                    Add Cart
+                  <button
+                    className="buttonaddsmall"
+                    onClick={() => handleAddToCart(product)}
+                  >
+                    <i className="fa-solid fa-cart-plus "></i>
+                    Add To Cart
                   </button>
                 </div>
               </div>

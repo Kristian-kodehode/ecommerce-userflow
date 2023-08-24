@@ -56,6 +56,22 @@ body {
   cursor: pointer;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.buttonaddsmall {
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.8em;
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--color-bgblack);
+  color: var(--color-newwhite);
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1em;
 }
 
@@ -65,5 +81,8 @@ body {
   border: 1px solid var(--color-bodytext);
 }
 .buttonadd:hover {
+  text-decoration: underline;
+}
+.buttonaddsmall:hover {
   text-decoration: underline;
 }
