@@ -10,9 +10,12 @@
   font-family: "Bricolage Grotesque", sans-serif;
 } */
 .categoryButtons {
+  max-width: 350px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* background-color: pink; */
+  margin: 0 auto;
   gap: 0.5em 1em;
   margin-bottom: 1em;
 }
@@ -134,4 +137,10 @@
   /* color: coral; */
   color: var(--color-bgblack);
   font-size: 1.6em;
+}
+
+@media only screen and (min-width: 716px) {
+  .categoryButtons {
+    max-width: 1200px;
+  }
 }
