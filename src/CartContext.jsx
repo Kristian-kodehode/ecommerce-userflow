@@ -12,6 +12,7 @@ export const CartProvider = ({ children }) => {
     );
     if (!isAlreadyInCart) {
       setSelectedItems((prevItems) => [...prevItems, product]);
+      // alert("Item added to cart");
     }
   };
 

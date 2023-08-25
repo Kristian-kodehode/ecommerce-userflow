@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import { useCart } from "../../CartContext";
 import styles from "./step1.module.css";
@@ -9,6 +9,12 @@ const Step1 = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const { addToCart, selectedItems, setSelectedItems } = useCart();
+
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [addedProducts, setAddedProducts] = useState([]);
+
+  const navigate = useNavigate();
+
   // const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -32,7 +38,16 @@ const Step1 = () => {
 
   const handleAddToCart = (product) => {
     if (product) {
-      addToCart(product);
+      const isAlreadyAdded = addedProducts.includes(product.id);
+      if (!isAlreadyAdded) {
+        addToCart(product);
+        setAddedProducts((prevAddedProducts) => [
+          ...prevAddedProducts,
+          product.id,
+        ]);
+        setShowOverlay(true);
+        navigate("/overlay");
+      }
     }
     console.log("Product added to cart from ItemPage");
   };
@@ -99,6 +114,7 @@ const Step1 = () => {
           );
         })}
       </ul>
+      {showOverlay && <OverlayPage />}
 
       {/* <Link to="/step2">Next Step</Link> */}
     </div>

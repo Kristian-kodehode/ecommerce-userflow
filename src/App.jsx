@@ -9,6 +9,7 @@ import Step3 from "./routes/step3/step3.jsx";
 import Step4 from "./routes/step4/step4.route.jsx";
 import AboutProject from "./routes/aboutproject/aboutproject";
 import ItemPage from "./routes/itemPage/itemPage.jsx";
+import OverlayPage from "./routes/overlayPage/overlayPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/step4" element={<Step4 />} />
           <Route path="/aboutproject" element={<AboutProject />} />
           <Route path="/itemPage/:itemId" element={<ItemPage />} />
+          <Route path="/overlay" element={<OverlayPage />} />
         </Route>
       </Routes>
     </CartProvider>
