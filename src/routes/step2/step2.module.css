@@ -1,5 +1,105 @@
 .pagecontainer {
   margin: 0px auto;
   margin-bottom: 3em;
+  /* text-align: center; */
+  padding: 0em 1em;
+}
+.headercontainer {
   text-align: center;
+}
+.clearbutton {
+  font-size: 1rem;
+  padding: 1.25em;
+  font-weight: 700;
+  text-align: center;
+
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: var(--color-newwhite);
+  color: var(--color-black);
+  border: 1px solid var(--color-bodytext);
+}
+.clearbutton:hover {
+  text-decoration: line-through;
+}
+.productcontainer {
+  display: flex;
+  height: 100px;
+  min-width: 370px;
+  gap: 0.5em;
+
+  margin-bottom: 2em;
+}
+.productinfo {
+  width: 100%;
+  /* background-color: pink; */
+  padding: 1em 0em;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .imageandtitle {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+} */
+
+.productimage {
+  width: 80px;
+}
+
+.quantityandpricecontainer {
+  /* background-color: pink; */
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantitycontainer {
+  font-size: 1rem;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  border: 1px solid var(--color-grey8b);
+  width: fit-content;
+  /* height: 100%; */
+}
+.inputcontainer {
+  font-size: 1rem;
+  width: 2em;
+  text-align: center;
+  border: none;
+}
+.buttonquantity {
+  /* height: 100%; */
+  padding: 0.5em;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: white;
+
+  /* width: 48px; */
+  /* height: 48px; */
+}
+
+.buttonremove {
+  font-size: 1rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  /* width: fit-content; */
+
+  /* background-color: var(--color-grey8b); */
+  padding: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  /* .productcontainer {
+    max-width: 970px;
+  } */
 }

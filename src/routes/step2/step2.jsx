@@ -24,20 +24,36 @@ const Step2 = () => {
   console.log(selectedItems);
   return (
     <div className={styles.pagecontainer}>
-      <h1>Shoppingcart</h1>
+      <h1 className={styles.headercontainer}>Shoppingcart</h1>
       {/* List of cart items below in ul */}
       <ul>
         {selectedItems.map((item, index) => (
-          <li key={index}>
-            <img src={item.image} alt="" />
-            {item.title} - ${item.price}
-            <button
-              className="buttonadd secondary"
-              onClick={() => handleRemoveItem(item.id)}
-            >
-              <i className="fa-solid fa-trash-can"></i> Remove item
-            </button>
-          </li>
+          <div key={index} className={styles.productcontainer}>
+            <img className={styles.productimage} src={item.image} alt="" />
+            <div className={styles.productinfo}>
+              <h4>{item.title}</h4>
+              <span className={styles.quantityandpricecontainer}>
+                <span className={styles.quantitycontainer}>
+                  <button className={styles.buttonquantity}>-</button>
+                  <input
+                    className={styles.inputcontainer}
+                    type="text"
+                    value="1"
+                  />
+                  <button className={styles.buttonquantity}>+</button>
+                </span>
+                <span>
+                  <span>$ {item.price}</span>
+                  <button
+                    className={styles.buttonremove}
+                    onClick={() => handleRemoveItem(item.id)}
+                  >
+                    <i className="fa-solid fa-trash-can"></i>
+                  </button>
+                </span>
+              </span>
+            </div>
+          </div>
         ))}
       </ul>
       <h2>Total Amount: $ {totalAmount.toFixed(2)}</h2>
@@ -46,10 +62,12 @@ const Step2 = () => {
         <button className="buttonadd">
           {" "}
           Go to checkout
-          <i className="fa-solid fa-arrow-right displayhover"></i>
+          {/* <i className="fa-solid fa-arrow-right displayhover"></i> */}
         </button>{" "}
       </Link>
-      <button onClick={handleClearCart}>Clear Cart</button>
+      <button onClick={handleClearCart} className={styles.clearbutton}>
+        Clear Cart
+      </button>
     </div>
   );
 };
