@@ -1,7 +1,8 @@
 import React from "react";
 import { useCart } from "../../CartContext";
 import { Link } from "react-router-dom";
-// import styles from "./step4.module.css";
+import CheckoutForm from "../../components/checkoutForm/checkoutForm";
+import styles from "./step3.module.css";
 
 const Step3 = () => {
   const { selectedItems, setSelectedItems } = useCart([]);
@@ -11,11 +12,11 @@ const Step3 = () => {
   };
 
   return (
-    <div>
+    <div className={styles.step3container}>
       <h1>Step 3: Add Shipping and Payment Details</h1>
+      <CheckoutForm />
       {/* Add your content for adding shipping and payment details here */}
-      <input type="text" />
-      <Link to="/step4" onClick={handleCompleteCart}>
+      <Link to="/step4" onClick={handleCompleteCart} className="buttonadd">
         Complete Purchase
       </Link>
     </div>

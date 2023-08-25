@@ -1,0 +1,19 @@
+.checkoutcontainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1em;
+  /* text-align: center; */
+  /* background-color: pink; */
+}
+label {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.2em;
+}
+
+input,
+select {
+  padding: 1em;
+  border: none;
+  background-color: rgb(240, 240, 240);
+}
