@@ -9,9 +9,13 @@ nav {
 .linkcontainer {
   margin: auto;
   display: flex;
-  justify-content: center;
+  text-align: center;
+  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
-  gap: 4em;
+  /* gap: 4em; */
+  /* background-color: red; */
+  width: 100%;
 }
 
 a {
@@ -32,6 +36,7 @@ a {
   display: inline-block;
   position: relative;
   opacity: 0.8;
+  /* background-color: aliceblue; */
 }
 .navlinks:hover {
   opacity: 1;
@@ -55,3 +60,12 @@ a {
 /*
 *Animated line code stops here
 */
+
+@media only screen and (min-width: 768px) {
+  /* .productcontainer {
+    max-width: 970px;
+  } */
+  .linkcontainer {
+    width: 700px;
+  }
+}
