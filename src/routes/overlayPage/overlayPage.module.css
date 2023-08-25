@@ -1,0 +1,20 @@
+.pagecontainer {
+  padding-top: 2em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.linkbuttons {
+  background-color: var(--color-bgblack);
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.ctacontainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5em;
+  padding: 1em;
+}
