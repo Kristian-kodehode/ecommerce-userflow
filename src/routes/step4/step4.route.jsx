@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import styles from "./step4.module.css";
 
 import Lottie from "lottie-react";
-import animationData from "../../animations/animation_tadaaa.json";
+import animationData from "../../animations/animation_shipping2.json";
 
 const Step4 = () => {
   const navigate = useNavigate();
@@ -29,7 +30,11 @@ const Step4 = () => {
     <div>
       <h1>Step 4: Payment Successful!</h1>
       <p>Redirecting in {remainingTime / 1000} seconds...</p>
-      <Lottie animationData={animationData} loop={false} />
+      <Lottie
+        animationData={animationData}
+        loop={false}
+        className={styles.lottieanimation}
+      />
       <Link to="/">Go back to Step 1</Link>
     </div>
   );
