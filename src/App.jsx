@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./routes/layout/layout";
 import { CartProvider } from "./CartContext";
+
 import "./App.css";
 
 import Step1 from "./routes/step1/step1.jsx";

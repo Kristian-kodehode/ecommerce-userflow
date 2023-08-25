@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import Lottie from "lottie-react";
+import animationData from "../../animations/animation_tadaaa.json";
+
 const Step4 = () => {
   const navigate = useNavigate();
   const redirectTime = 5000; // 5000 milliseconds (5 seconds)
@@ -26,6 +29,7 @@ const Step4 = () => {
     <div>
       <h1>Step 4: Payment Successful!</h1>
       <p>Redirecting in {remainingTime / 1000} seconds...</p>
+      <Lottie animationData={animationData} loop={false} />
       <Link to="/">Go back to Step 1</Link>
     </div>
   );

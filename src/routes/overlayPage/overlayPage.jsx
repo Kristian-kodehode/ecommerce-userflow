@@ -1,15 +1,23 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./overlayPage.module.css";
-// import step2 from "../step2/step2";
+
+import Lottie from "lottie-react";
+
+import animationData from "../../animations/animation_checkmark.json";
 
 const OverlayPage = () => {
   return (
     <div className={styles.pagecontainer}>
       <div>
+        <h1>Contgratulations!</h1>
         <h3>Item Successfully Added to Cart</h3>
       </div>
-
+      <Lottie
+        animationData={animationData}
+        loop={false}
+        className={styles.lottieanimation}
+      />
       <div className={styles.ctacontainer}>
         <Link to="/" className={styles.linkbuttons}>
           Continue shopping
