@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
 import { useCart } from "../../CartContext";
 import styles from "./step1.module.css";
 import RenderStars from "../../components/rating.jsx";
 
 const Step1 = () => {
   const [products, setProducts] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  // const [selectedCategory, setSelectedCategory] = useState(null);
+  const [searchInput, setSearchInput] = useState("");
+  const [categorySelector, setCategorySelector] = useState("All");
   const { addToCart, selectedCartItems, setSelectedCartItems } = useCart();
 
   const [showOverlay, setShowOverlay] = useState(false);
   const [addedProducts, setAddedProducts] = useState([]);
 
   const navigate = useNavigate();
-
-  // const [product, setProduct] = useState(null);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -28,13 +27,26 @@ const Step1 = () => {
   }, []);
 
   //Product Filtering With Buttons
-  const filteredProducts = selectedCategory
-    ? products.filter((product) => product.category === selectedCategory)
-    : products;
-  const categories = [
-    "Show All",
-    ...Array.from(new Set(products.map((product) => product.category))),
-  ];
+  // const filteredProducts = categorySelector
+  //   ? products.filter((product) => product.category === categorySelector)
+  //   : products;
+  // const categories = [
+  //   "Show All",
+  //   ...Array.from(new Set(products.map((product) => product.category))),
+  // ];
+
+  const searchedProducts = products.filter(
+    (product) =>
+      product.title.toLowerCase().includes(searchInput.toLowerCase()) &&
+      (categorySelector === "All" || product.category === categorySelector)
+  );
+
+  const categories = [];
+  products.forEach((product) => {
+    if (!categories.includes(product.category)) {
+      categories.push(product.category);
+    }
+  });
 
   const handleAddToCart = (product) => {
     if (product) {
@@ -54,28 +66,29 @@ const Step1 = () => {
 
   return (
     <div className={styles.step1Container}>
+      <input
+        type="text"
+        placeholder="Search for product..."
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+      />
       <div className={styles.headingscontainer}>
         <h1>Products</h1>
         <h6>Select your products</h6>
       </div>
 
       <div className={styles.categoryButtons}>
+        <button onClick={() => setCategorySelector("All")}>
+          All Categories
+        </button>
         {categories.map((category) => (
-          <button
-            key={category}
-            className={
-              selectedCategory === category ? styles.activeCategory : ""
-            }
-            onClick={() =>
-              setSelectedCategory(category === "Show All" ? null : category)
-            }
-          >
+          <button key={category} onClick={() => setCategorySelector(category)}>
             {category}
           </button>
         ))}
       </div>
       <ul className={styles.productList}>
-        {filteredProducts.map((product) => {
+        {searchedProducts.map((product) => {
           return (
             <>
               <div key={product.id} className={styles.productCard}>
