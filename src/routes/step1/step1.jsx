@@ -5,15 +5,12 @@ import styles from "./step1.module.css";
 import RenderStars from "../../components/rating.jsx";
 
 const Step1 = () => {
-  const [products, setProducts] = useState([]);
-  // const [selectedCategory, setSelectedCategory] = useState(null);
-  const [searchInput, setSearchInput] = useState("");
-  const [categorySelector, setCategorySelector] = useState("All");
-  const { addToCart, selectedCartItems, setSelectedCartItems } = useCart();
-
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [products, setProducts] = useState([]); //Fetched Api Products
+  const [searchInput, setSearchInput] = useState(""); //Search Input
+  const [categorySelector, setCategorySelector] = useState("All"); //Category Buttons
   const [addedProducts, setAddedProducts] = useState([]);
-
+  const { addToCart } = useCart(); //, selectedCartItems, setSelectedCartItems - these two not needed?
+  const [showOverlay, setShowOverlay] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,15 +22,6 @@ const Step1 = () => {
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
-
-  //Product Filtering With Buttons
-  // const filteredProducts = categorySelector
-  //   ? products.filter((product) => product.category === categorySelector)
-  //   : products;
-  // const categories = [
-  //   "Show All",
-  //   ...Array.from(new Set(products.map((product) => product.category))),
-  // ];
 
   const searchedProducts = products.filter(
     (product) =>
@@ -66,27 +54,46 @@ const Step1 = () => {
 
   return (
     <div className={styles.step1Container}>
-      <input
-        type="text"
-        placeholder="Search for product..."
-        value={searchInput}
-        onChange={(e) => setSearchInput(e.target.value)}
-      />
       <div className={styles.headingscontainer}>
         <h1>Products</h1>
-        <h6>Select your products</h6>
+        <div className={styles.searchbar}>
+          <i className="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search for product..."
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+            className={styles.searchinput}
+          />
+        </div>
       </div>
 
       <div className={styles.categoryButtons}>
-        <button onClick={() => setCategorySelector("All")}>
+        <button
+          style={{
+            // backgroundColor: categorySelector === "All" ? "#333333" : "",
+            borderColor: categorySelector == "All" ? "#333333" : "",
+            // color: categorySelector === "All" ? "white" : "",
+          }}
+          onClick={() => setCategorySelector("All")}
+        >
           All Categories
         </button>
         {categories.map((category) => (
-          <button key={category} onClick={() => setCategorySelector(category)}>
+          <button
+            key={category}
+            style={{
+              borderColor: categorySelector == category ? "#333333" : "",
+              // backgroundColor: categorySelector === category ? "#333333" : "",
+              // color: categorySelector === category ? "white" : "",
+            }}
+            onClick={() => setCategorySelector(category)}
+          >
             {category}
           </button>
         ))}
       </div>
+
       <ul className={styles.productList}>
         {searchedProducts.map((product) => {
           return (
