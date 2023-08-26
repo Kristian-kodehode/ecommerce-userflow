@@ -3,15 +3,15 @@ import { createContext, useContext, useState } from "react";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [selectedItems, setSelectedItems] = useState([]);
+  const [selectedCartItems, setSelectedCartItems] = useState([]);
 
   const addToCart = (product) => {
     //Can use some method instead of find. gpt means some is more correct
-    const isAlreadyInCart = selectedItems.find(
+    const isAlreadyInCart = selectedCartItems.find(
       (item) => item.id === product.id
     );
     if (!isAlreadyInCart) {
-      setSelectedItems((prevItems) => [...prevItems, product]);
+      setSelectedCartItems((prevItems) => [...prevItems, product]);
       // alert("Item added to cart");
     }
   };
@@ -19,8 +19,8 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider
       value={{
-        selectedItems,
-        setSelectedItems,
+        selectedCartItems,
+        setSelectedCartItems,
         addToCart,
       }}
     >

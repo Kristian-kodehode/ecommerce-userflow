@@ -5,10 +5,10 @@ import CheckoutForm from "../../components/checkoutForm/checkoutForm";
 import styles from "./step3.module.css";
 
 const Step3 = () => {
-  const { selectedItems, setSelectedItems } = useCart([]);
+  const { selectedCartItems, setSelectedCartItems } = useCart([]);
 
   const handleCompleteCart = () => {
-    setSelectedItems([]);
+    setSelectedCartItems([]);
   };
 
   return (

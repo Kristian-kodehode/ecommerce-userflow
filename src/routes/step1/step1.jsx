@@ -8,7 +8,7 @@ import RenderStars from "../../components/rating.jsx";
 const Step1 = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const { addToCart, selectedItems, setSelectedItems } = useCart();
+  const { addToCart, selectedCartItems, setSelectedCartItems } = useCart();
 
   const [showOverlay, setShowOverlay] = useState(false);
   const [addedProducts, setAddedProducts] = useState([]);

@@ -4,7 +4,7 @@ import { useCart } from "../../CartContext";
 import styles from "./navigation.module.css";
 
 const Navigation = () => {
-  const { selectedItems, setSelectedItems } = useCart([]);
+  const { selectedCartItems, setSelectedCartItems } = useCart([]);
   return (
     <nav>
       <div className={styles.linkcontainer}>
@@ -15,7 +15,8 @@ const Navigation = () => {
           className={`${styles.navlinks} ${styles.navlinksfadeup}`}
           to="/step2"
         >
-          Cart {selectedItems.length > 0 ? `(${selectedItems.length})` : ""}
+          Cart{" "}
+          {selectedCartItems.length > 0 ? `(${selectedCartItems.length})` : ""}
         </Link>
         <Link
           className={`${styles.navlinks} ${styles.navlinksfadeup}`}

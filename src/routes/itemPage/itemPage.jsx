@@ -8,7 +8,7 @@ import RenderStars from "../../components/rating";
 const ItemPage = () => {
   const { itemId } = useParams();
   const [product, setProduct] = useState(null);
-  const { addToCart, selectedItems } = useCart();
+  const { addToCart, selectedCartItems } = useCart();
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${itemId}`)

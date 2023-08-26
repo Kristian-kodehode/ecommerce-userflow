@@ -4,30 +4,30 @@ import { useCart } from "../../CartContext";
 import styles from "./step2.module.css";
 
 const Step2 = () => {
-  const { selectedItems, setSelectedItems } = useCart([]);
+  const { selectedCartItems, setSelectedCartItems } = useCart([]);
 
   const handleRemoveItem = (productId) => {
-    setSelectedItems((prevItems) => {
+    setSelectedCartItems((prevItems) => {
       return prevItems.filter((item) => item.id !== productId);
     });
   };
 
-  const totalAmount = selectedItems.reduce(
+  const totalAmount = selectedCartItems.reduce(
     (total, item) => total + item.price,
     0
   );
 
   const handleClearCart = () => {
-    setSelectedItems([]);
+    setSelectedCartItems([]);
   };
 
-  console.log(selectedItems);
+  console.log(selectedCartItems);
   return (
     <div className={styles.pagecontainer}>
       <h1 className={styles.headercontainer}>Shoppingcart</h1>
       {/* List of cart items below in ul */}
       <ul>
-        {selectedItems.map((item, index) => (
+        {selectedCartItems.map((item, index) => (
           <div key={index} className={styles.productcontainer}>
             <img className={styles.productimage} src={item.image} alt="" />
             <div className={styles.productinfo}>
