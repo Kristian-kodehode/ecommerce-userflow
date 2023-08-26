@@ -58,6 +58,7 @@ const Step1 = () => {
         <h1>Products</h1>
         <h6>Select your products</h6>
       </div>
+
       <div className={styles.categoryButtons}>
         {categories.map((category) => (
           <button
@@ -115,7 +116,6 @@ const Step1 = () => {
         })}
       </ul>
       {showOverlay && <OverlayPage />}
-
       {/* <Link to="/step2">Next Step</Link> */}
     </div>
   );
