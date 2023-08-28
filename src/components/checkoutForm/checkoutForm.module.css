@@ -1,19 +1,30 @@
 .checkoutcontainer {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 1em;
+  gap: 1.25em;
+  margin-top: 1em;
   /* text-align: center; */
   /* background-color: pink; */
 }
 label {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 0.2em;
+  /* gap: 0.2em; */
+  font-size: 12px;
 }
 
 input,
 select {
-  padding: 1em;
+  padding: 0.75em 0em;
   border: none;
-  background-color: rgb(240, 240, 240);
+  border-bottom: 1px solid #9a9a9a;
+
+  /* background-color: rgb(240, 240, 240); */
+}
+
+.expirationandcvc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
 }

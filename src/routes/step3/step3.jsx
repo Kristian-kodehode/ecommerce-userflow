@@ -13,12 +13,36 @@ const Step3 = () => {
 
   return (
     <div className={styles.step3container}>
-      <h1>Step 3: Add Shipping and Payment Details</h1>
+      <h1 className={styles.stepheading}>Checkout</h1>
+      {/* <h1>Step 3: Add Shipping and Payment Details</h1> */}
+
       <CheckoutForm />
-      {/* Add your content for adding shipping and payment details here */}
-      <Link to="/step4" onClick={handleCompleteCart} className="buttonadd">
-        Complete Purchase
-      </Link>
+      <div className={styles.ctacontainer}>
+        <div className={styles.newsletter}>
+          <input
+            type="checkbox"
+            // checked="checked"
+            name="newsletter"
+            className={styles.checkmark}
+            id=""
+          />
+          <label htmlFor="newsletter">Sign up for our newsletter</label>
+        </div>
+        <Link
+          to="/step4"
+          onClick={handleCompleteCart}
+          className={styles.buttoncomplete}
+        >
+          Complete Purchase
+        </Link>
+        {/* <Link>-Terms and Conditions-</Link> */}
+      </div>
+
+      <img
+        src="src/images/SaferPay logo etc.svg"
+        className={styles.imagelogo}
+        alt=""
+      />
     </div>
   );
 };
