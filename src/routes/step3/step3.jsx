@@ -38,11 +38,7 @@ const Step3 = () => {
         {/* <Link>-Terms and Conditions-</Link> */}
       </div>
 
-      <img
-        src="/images/SaferPay logo etc.svg"
-        className={styles.imagelogo}
-        alt=""
-      />
+      <img src="/images/saferpaylogo.svg" className={styles.imagelogo} alt="" />
     </div>
   );
 };
