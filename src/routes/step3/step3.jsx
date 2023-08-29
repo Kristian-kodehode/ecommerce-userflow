@@ -39,7 +39,7 @@ const Step3 = () => {
       </div>
 
       <img
-        src="public/images/SaferPay logo etc.svg"
+        src="/images/SaferPay logo etc.svg"
         className={styles.imagelogo}
         alt=""
       />
