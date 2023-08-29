@@ -10,8 +10,6 @@ const CheckoutForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Here you can add code to handle form submission,
-    // such as sending the form data to a server.
   };
 
   return (
