@@ -14,10 +14,12 @@
   padding: 0.5em 1em;
   /* border-radius: 100px; */
   background-color: rgb(245, 245, 245);
+  border: none;
 }
 .searchinput {
   width: 100%;
   background-color: rgba(255, 255, 255, 0);
+  border: none;
 }
 
 .categoryButtons {

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./searchCoponent.module.css";
 
 function SearchInput({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -20,6 +21,7 @@ function SearchInput({ onSearch }) {
         placeholder="Search..."
         value={searchTerm}
         onChange={handleChange}
+        className={styles.searchinput}
       />
       <button onClick={handleSearch}>Search</button>
     </div>
