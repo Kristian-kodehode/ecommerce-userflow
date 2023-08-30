@@ -38,70 +38,83 @@ const Step2 = () => {
 
   console.log(selectedCartItems);
   return (
-    <div className={styles.pagecontainer}>
+    <>
       <h1 className={styles.headercontainer}>Shoppingcart</h1>
-      {/* List of cart items below in ul */}
-      <ul>
-        {selectedCartItems.map((item, index) => (
-          <div key={index} className={styles.productcontainer}>
-            <img className={styles.productimage} src={item.image} alt="" />
-            <div className={styles.productinfo}>
-              <h4>{item.title}</h4>
+      <div className={styles.pagecontainer}>
+        {/* List of cart items below in ul */}
+        <div className={styles.productsection}>
+          <ul>
+            {selectedCartItems.map((item, index) => (
+              <div key={index} className={styles.productcontainer}>
+                <img className={styles.productimage} src={item.image} alt="" />
+                <div className={styles.productinfo}>
+                  <h4 className={styles.itemtitle}>{item.title}</h4>
 
-              <span className={styles.quantityandpricecontainer}>
-                <span className={styles.quantitycontainer}>
-                  <button
-                    className={styles.buttonquantity}
-                    onClick={() =>
-                      handleCounterChange(item.id, (counter[item.id] || 1) - 1)
-                    }
-                  >
-                    -
-                  </button>
-                  <span className={styles.quantitydisplay}>
-                    {counter[item.id] || 1}
-                  </span>{" "}
-                  <button
-                    className={styles.buttonquantity}
-                    onClick={() =>
-                      handleCounterChange(item.id, (counter[item.id] || 1) + 1)
-                    }
-                  >
-                    +
-                  </button>
-                </span>
+                  <span className={styles.quantityandpricecontainer}>
+                    <div className={styles.quantityanddeletebutton}>
+                      <span className={styles.quantitycontainer}>
+                        <button
+                          className={styles.buttonquantity}
+                          onClick={() =>
+                            handleCounterChange(
+                              item.id,
+                              (counter[item.id] || 1) - 1
+                            )
+                          }
+                        >
+                          -
+                        </button>
+                        <span className={styles.quantitydisplay}>
+                          {counter[item.id] || 1}
+                        </span>{" "}
+                        <button
+                          className={styles.buttonquantity}
+                          onClick={() =>
+                            handleCounterChange(
+                              item.id,
+                              (counter[item.id] || 1) + 1
+                            )
+                          }
+                        >
+                          +
+                        </button>
+                      </span>
+                      <button
+                        className={styles.buttonremove}
+                        onClick={() => handleRemoveItem(item.id)}
+                      >
+                        <i className="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
 
-                <span>
-                  <span>
-                    $ {(item.price * (counter[item.id] || 1)).toFixed(2)}
+                    <div>
+                      <span>
+                        $ {(item.price * (counter[item.id] || 1)).toFixed(2)}
+                      </span>
+                    </div>
                   </span>
-                  <button
-                    className={styles.buttonremove}
-                    onClick={() => handleRemoveItem(item.id)}
-                  >
-                    <i className="fa-solid fa-trash-can"></i>
-                  </button>
-                </span>
-              </span>
-            </div>
-          </div>
-        ))}
-      </ul>
-      <h2 className={styles.totalamount}>
-        Total Amount: $ {totalAmount.toFixed(2)}
-      </h2>
-
-      <Link to="/step3" className="hoverlink">
-        <button className="buttonadd">
-          {" "}
-          Go to checkout
-          {/* <i className="fa-solid fa-arrow-right displayhover"></i> */}
-        </button>{" "}
-      </Link>
-      <button onClick={handleClearCart} className={styles.clearbutton}>
-        Clear Cart
-      </button>
-    </div>
+                </div>
+              </div>
+            ))}
+          </ul>
+        </div>
+        <div className={styles.paysection}>
+          <h4 className={styles.totalamount}>
+            Total Amount: $ {totalAmount.toFixed(2)}
+          </h4>
+          <Link to="/step3" className="hoverlink">
+            <button className="buttonadd">
+              {" "}
+              Go to checkout
+              {/* <i className="fa-solid fa-arrow-right displayhover"></i> */}
+            </button>{" "}
+          </Link>
+          <button onClick={handleClearCart} className={styles.clearbutton}>
+            Clear Cart
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 
