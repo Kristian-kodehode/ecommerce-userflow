@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.maincontainer {
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.footercontainer {
+  width: 100%;
+  min-height: 100px;
+  background-color: var(--color-bgblack);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+}
+
+.footerlinks {
+  color: white;
+}
