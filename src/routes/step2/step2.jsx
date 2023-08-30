@@ -98,9 +98,10 @@ const Step2 = () => {
           </ul>
         </div>
         <div className={styles.paysection}>
-          <h4 className={styles.totalamount}>
-            Total Amount: $ {totalAmount.toFixed(2)}
-          </h4>
+          <div className={styles.totalamountcontainer}>
+            <h4 className={styles.totalamount}>Total Amount: </h4>
+            <h2 className={styles.totalamount}>$ {totalAmount.toFixed(2)}</h2>
+          </div>
           <Link to="/step3" className="hoverlink">
             <button className="buttonadd">
               {" "}
