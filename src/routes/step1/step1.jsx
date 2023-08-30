@@ -73,9 +73,7 @@ const Step1 = () => {
       <div className={styles.categoryButtons}>
         <button
           style={{
-            // backgroundColor: categorySelector === "All" ? "#333333" : "",
             borderColor: categorySelector == "All" ? "#333333" : "",
-            // color: categorySelector === "All" ? "white" : "",
           }}
           onClick={() => setCategorySelector("All")}
         >
