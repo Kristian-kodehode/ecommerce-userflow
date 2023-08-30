@@ -86,8 +86,6 @@ const Step1 = () => {
             key={category}
             style={{
               borderColor: categorySelector == category ? "#333333" : "",
-              // backgroundColor: categorySelector === category ? "#333333" : "",
-              // color: categorySelector === category ? "white" : "",
             }}
             onClick={() => setCategorySelector(category)}
           >
