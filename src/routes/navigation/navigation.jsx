@@ -5,6 +5,7 @@ import styles from "./navigation.module.css";
 
 const Navigation = () => {
   const { selectedCartItems, setSelectedCartItems } = useCart([]);
+
   return (
     <nav>
       <div className={styles.linkcontainer}>
