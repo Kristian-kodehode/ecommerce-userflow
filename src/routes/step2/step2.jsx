@@ -14,11 +14,6 @@ const Step2 = () => {
     });
   };
 
-  // const totalAmount = selectedCartItems.reduce(
-  //   (total, item) => total + item.price,
-  //   0
-  // );
-
   const totalAmount = selectedCartItems.reduce((total, item) => {
     // Calculate the adjusted price based on the multiplier (default to 1 if no counter exists)
     const multiplier = counter[item.id] || 1;
@@ -37,6 +32,7 @@ const Step2 = () => {
   };
 
   console.log(selectedCartItems);
+
   return (
     <>
       <h1 className={styles.headercontainer}>Shoppingcart</h1>

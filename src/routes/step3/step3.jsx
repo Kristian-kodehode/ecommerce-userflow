@@ -3,7 +3,8 @@ import { useCart } from "../../CartContext";
 import { Link } from "react-router-dom";
 import CheckoutForm from "../../components/checkoutForm/checkoutForm";
 import styles from "./step3.module.css";
-import saferpaylogo from "../../../public/images/saferpaylogo.svg";
+// import saferpaylogo from "../../../public/images/saferpaylogo.svg";
+import saferpaylogo from "/images/saferpaylogo.svg";
 
 const Step3 = () => {
   const { selectedCartItems, setSelectedCartItems } = useCart([]);

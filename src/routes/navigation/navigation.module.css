@@ -3,7 +3,11 @@ nav {
   grid-template-columns: repeat(1, 1fr);
   padding: 1em;
   background-color: var(--color-bgblack);
+  opacity: 0.99;
+
   text-align: center;
+  position: sticky;
+  top: 0;
 }
 
 .linkcontainer {
@@ -11,6 +15,7 @@ nav {
   display: flex;
   text-align: center;
   justify-content: space-between;
+
   align-items: center;
   width: 100%;
 }
