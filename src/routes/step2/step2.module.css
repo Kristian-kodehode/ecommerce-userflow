@@ -12,6 +12,8 @@
 .paysection {
   display: grid;
   gap: 1em;
+  border-top: 1px solid lightgray;
+  padding-top: 1em;
 }
 .headercontainer {
   text-align: center;
@@ -41,11 +43,13 @@
 }
 .productcontainer {
   display: flex;
-  height: 100px;
+  height: 130px;
   min-width: 370px;
+  /* max-width: 540px; */
   gap: 0.5em;
 
   margin-bottom: 2em;
+  /* border: 1px solid black; */
 }
 .productinfo {
   width: 100%;
@@ -57,7 +61,6 @@
 }
 .itemtitle {
   height: 50px;
-  border: 1px solid black;
 }
 
 .productimage {
@@ -115,6 +118,9 @@
 @media only screen and (min-width: 768px) {
   .pagecontainer {
     grid-template-columns: repeat(6, 1fr);
+  }
+  .productcontainer {
+    /* border-right: 1px solid lightgray; */
   }
   /* .paysection {
     width: 30%;
