@@ -18,6 +18,12 @@
 .headercontainer {
   text-align: center;
 }
+
+.titleandprice {
+  display: flex;
+  justify-content: space-between;
+}
+
 .quantityanddeletebutton {
   display: flex;
   align-items: center;
@@ -61,6 +67,7 @@
 }
 .itemtitle {
   height: 50px;
+  width: 80%;
 }
 
 .productimage {
@@ -130,5 +137,9 @@
   }
   .paysection {
     grid-column: 5 / 7;
+    border-top: none;
+    border-left: 1px solid lightgray;
+    padding-left: 1em;
+    height: fit-content;
   }
 }

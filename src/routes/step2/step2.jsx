@@ -48,7 +48,12 @@ const Step2 = () => {
               <div key={index} className={styles.productcontainer}>
                 <img className={styles.productimage} src={item.image} alt="" />
                 <div className={styles.productinfo}>
-                  <h4 className={styles.itemtitle}>{item.title}</h4>
+                  <div className={styles.titleandprice}>
+                    <h4 className={styles.itemtitle}>{item.title}</h4>
+                    <h4>
+                      $ {(item.price * (counter[item.id] || 1)).toFixed(2)}
+                    </h4>
+                  </div>
 
                   <span className={styles.quantityandpricecontainer}>
                     <div className={styles.quantityanddeletebutton}>
@@ -85,12 +90,6 @@ const Step2 = () => {
                       >
                         <i className="fa-solid fa-trash-can"></i>
                       </button>
-                    </div>
-
-                    <div>
-                      <span>
-                        $ {(item.price * (counter[item.id] || 1)).toFixed(2)}
-                      </span>
                     </div>
                   </span>
                 </div>
