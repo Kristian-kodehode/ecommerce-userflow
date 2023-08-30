@@ -4,6 +4,7 @@ import { useCart } from "../../CartContext";
 import styles from "./step1.module.css";
 import RenderStars from "../../components/rating.jsx";
 import OverlayPage from "../overlayPage/overlayPage";
+import SkeletonLoader from "../skeletonLoader/skeletonLoader";
 
 const Step1 = () => {
   const [products, setProducts] = useState([]); //Fetched Api Products
@@ -96,43 +97,47 @@ const Step1 = () => {
       </div>
 
       <ul className={styles.productList}>
-        {searchedProducts.map((product) => {
-          return (
-            <div key={product.id} className={styles.productCard}>
-              <Link to={`/itemPage/${product.id}`} key={product.id}>
-                <div>
-                  <img
-                    src={product.image}
-                    className={styles.imagestep1}
-                    alt=""
-                  />
-                  <div className={styles.headingandcategory}>
-                    <div className={styles.cardCategory}>
-                      {product.category}
+        {products.length === 0 ? (
+          <SkeletonLoader count={6} />
+        ) : (
+          searchedProducts.map((product) => {
+            return (
+              <div key={product.id} className={styles.productCard}>
+                <Link to={`/itemPage/${product.id}`} key={product.id}>
+                  <div>
+                    <img
+                      src={product.image}
+                      className={styles.imagestep1}
+                      alt=""
+                    />
+                    <div className={styles.headingandcategory}>
+                      <div className={styles.cardCategory}>
+                        {product.category}
+                      </div>
+                      <h6 className={styles.cardTitle}>{product.title}</h6>
                     </div>
-                    <h6 className={styles.cardTitle}>{product.title}</h6>
                   </div>
+                </Link>
+                <div className={styles.priceandcta}>
+                  <div className={styles.priceandrating}>
+                    <h4 className={styles.cardPrice}>$ {product.price}</h4>
+                    <RenderStars
+                      rating={product.rating.rate}
+                      ratingcount={product.rating.count}
+                    />
+                  </div>
+                  <button
+                    className="buttonaddsmall"
+                    onClick={() => handleAddToCart(product)}
+                  >
+                    <i className="fa-solid fa-cart-plus "></i>
+                    Add To Cart
+                  </button>
                 </div>
-              </Link>
-              <div className={styles.priceandcta}>
-                <div className={styles.priceandrating}>
-                  <h4 className={styles.cardPrice}>$ {product.price}</h4>
-                  <RenderStars
-                    rating={product.rating.rate}
-                    ratingcount={product.rating.count}
-                  />
-                </div>
-                <button
-                  className="buttonaddsmall"
-                  onClick={() => handleAddToCart(product)}
-                >
-                  <i className="fa-solid fa-cart-plus "></i>
-                  Add To Cart
-                </button>
               </div>
-            </div>
-          );
-        })}
+            );
+          })
+        )}
       </ul>
       {showOverlay && <OverlayPage />}
       {/* <Link to="/step2">Next Step</Link> */}
