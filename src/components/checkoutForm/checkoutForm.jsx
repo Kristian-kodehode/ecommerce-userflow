@@ -5,7 +5,7 @@ const CheckoutForm = (props) => {
   const todayDate = new Date().toISOString().split("T")[0];
   const [cardType, setCardType] = useState("");
   const [cardNumber, setCardNumber] = useState("");
-  const [expiration, setExpiration] = useState("");
+  const [expiration, setExpiration] = useState("Hello");
   const [cvc, setCvc] = useState("");
 
   const handleSubmit = (event) => {
@@ -44,6 +44,7 @@ const CheckoutForm = (props) => {
           <label>
             Expiration
             <input
+              className={styles.datepicker}
               type="date"
               min={todayDate}
               value={expiration}
