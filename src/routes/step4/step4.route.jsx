@@ -28,6 +28,7 @@ const Step4 = () => {
     <div className={styles.container}>
       <h5>Congratulations!</h5>
       <h1>Payment Successful!</h1>
+      <p>Redirecting in {remainingTime / 1000} seconds...</p>
 
       <Lottie
         animationData={animationData}
@@ -38,7 +39,6 @@ const Step4 = () => {
       <Link to="/" className={styles.linkreturn}>
         <i className="fa-solid fa-shop"></i> Return to shop
       </Link>
-      <p>Redirecting in {remainingTime / 1000} seconds...</p>
     </div>
   );
 };
