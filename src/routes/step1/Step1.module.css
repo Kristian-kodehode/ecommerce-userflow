@@ -1,11 +1,11 @@
 .step1Container {
   margin: 0px auto;
+  background-color: #ddd;
 }
 .headingscontainer {
-  padding: 2em 1em;
+  padding: 2em 0em;
   color: black;
   text-align: center;
-
   display: grid;
   gap: 2em;
 }
@@ -17,8 +17,8 @@
   padding: 0.5em 1em;
   background-color: rgb(245, 245, 245);
   border: none;
-
-  width: 100%;
+  min-width: 350px;
+  /* width: 100%; */
   margin: 0 auto;
 }
 
@@ -170,6 +170,14 @@
     max-width: 1200px;
   }
   .searchbar {
-    width: 95%;
+    /* width: 95%; */
+    width: 716px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .searchbar {
+    /* width: 95%; */
+    min-width: 1080px;
   }
 }
