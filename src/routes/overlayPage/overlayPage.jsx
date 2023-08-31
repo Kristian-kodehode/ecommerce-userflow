@@ -10,7 +10,6 @@ const OverlayPage = () => {
   return (
     <div className={styles.pagecontainer}>
       <div>
-        <h1>Contgratulations!</h1>
         <h3>Item Successfully Added to Cart</h3>
       </div>
       <Lottie

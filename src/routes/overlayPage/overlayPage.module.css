@@ -23,3 +23,9 @@
   width: 50%;
   margin: 0 auto;
 }
+
+@media only screen and (min-width: 716px) {
+  .lottieanimation {
+    width: 30%;
+  }
+}
