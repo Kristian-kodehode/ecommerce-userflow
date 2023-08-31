@@ -19,7 +19,7 @@ label {
 input,
 select {
   /* padding: 0.75em 0em; */
-  padding-left: 0.5em;
+  /* padding-left: 0.5em; */
   height: 2.5rem;
   border: none;
   border-bottom: 1px solid #9a9a9a;
@@ -27,6 +27,7 @@ select {
   margin-top: 0.2em;
   font-size: 1rem;
 }
+
 select {
   appearance: none;
   /* height: 2.5rem; */
