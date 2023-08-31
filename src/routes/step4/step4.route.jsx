@@ -15,11 +15,9 @@ const Step4 = () => {
     const redirectTimeout = setTimeout(() => {
       navigate("/");
     }, redirectTime);
-
     const interval = setInterval(() => {
       setRemainingTime((prevTime) => Math.max(0, prevTime - 1000)); // Decrease by 1 second
     }, 1000);
-
     return () => {
       clearTimeout(redirectTimeout);
       clearInterval(interval);
@@ -27,15 +25,20 @@ const Step4 = () => {
   }, [navigate]);
 
   return (
-    <div>
-      <h1>Step 4: Payment Successful!</h1>
-      <p>Redirecting in {remainingTime / 1000} seconds...</p>
+    <div className={styles.container}>
+      <h5>Congratulations!</h5>
+      <h1>Payment Successful!</h1>
+
       <Lottie
         animationData={animationData}
         loop={false}
         className={styles.lottieanimation}
       />
-      <Link to="/">Go back to Step 1</Link>
+
+      <Link to="/" className={styles.linkreturn}>
+        <i className="fa-solid fa-shop"></i> Return to shop
+      </Link>
+      <p>Redirecting in {remainingTime / 1000} seconds...</p>
     </div>
   );
 };

@@ -43,7 +43,9 @@ body {
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
 }
-
+.icons-dark {
+  color: var(--col-dark80);
+}
 .buttonadd {
   border: none;
   font-size: 1rem;

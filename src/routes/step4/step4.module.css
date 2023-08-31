@@ -1,4 +1,22 @@
+.container {
+  background-color: rgb(245, 255, 245);
+  text-align: center;
+  padding: 1em;
+  /* color: rgb(82, 160, 52); */
+  color: #333333;
+  height: 100vh;
+}
+
 .lottieanimation {
   width: 50%;
   margin: 0 auto;
+}
+
+.linkreturn {
+  font-weight: 700;
+  color: #333333;
+}
+
+.linkreturn:hover {
+  text-decoration: underline;
 }

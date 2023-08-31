@@ -39,6 +39,7 @@ a {
   position: relative;
   opacity: 0.8;
 }
+
 .navlinks:hover {
   opacity: 1;
 }
@@ -50,7 +51,7 @@ a {
   background-color: white;
 }
 .navlinksfadeup::before {
-  width: 100%;
+  width: 104%;
   bottom: 1px;
   opacity: 0;
 }

@@ -10,20 +10,22 @@ const Navigation = () => {
     <nav>
       <div className={styles.linkcontainer}>
         <Link className={`${styles.navlinks} ${styles.navlinksfadeup}`} to="/">
-          Shop
+          <i className="fa-solid fa-shop"></i> Shop
         </Link>
         <Link
           className={`${styles.navlinks} ${styles.navlinksfadeup}`}
           to="/step2"
         >
-          Cart{" "}
+          {" "}
+          <i className="fa-solid fa-cart-shopping cartnavicon"></i> Cart{" "}
           {selectedCartItems.length > 0 ? `(${selectedCartItems.length})` : ""}
         </Link>
         <Link
           className={`${styles.navlinks} ${styles.navlinksfadeup}`}
           to="/aboutproject"
         >
-          About
+          {" "}
+          <i className="fa-solid fa-frog"></i> About
         </Link>
       </div>
     </nav>
