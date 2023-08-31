@@ -18,11 +18,12 @@ const CheckoutForm = (props) => {
         <label>
           Select Card Type:
           <select
+            className={styles.selectcard}
             value={cardType}
             onChange={(e) => setCardType(e.target.value)}
             required
           >
-            <option value=""></option>
+            <option value="">-select card-</option>
             <option value="visa">Visa</option>
             <option value="mastercard">Mastercard</option>
             <option value="amex">American Express</option>
