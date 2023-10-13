@@ -14,7 +14,19 @@ const AboutProject = () => {
           <li>
             Overview of shoppingcart. Also possible to edit item amount in cart.
           </li>
-          <li>Checkout section where you enter your fake creditcard info.</li>
+          <li>
+            Checkout section where you enter your fake creditcard info. Here you
+            can also click the{" "}
+            <a
+              href="https://kristian-kodehode.github.io/saferpay/"
+              target="_blank"
+              rel="noreferrer"
+              className="atag"
+            >
+              SaferPay
+            </a>{" "}
+            logo to view my SaferPay project as well.
+          </li>
           <li>Shop gives you a visual verification that its a success.</li>
         </ol>
       </div>
