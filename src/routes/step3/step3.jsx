@@ -40,7 +40,18 @@ const Step3 = () => {
         {/* <Link>-Terms and Conditions-</Link> */}
       </div>
 
-      <img src={saferpaylogo} className={styles.imagelogo} alt="" />
+      <a
+        href="https://kristian-kodehode.github.io/saferpay/"
+        target="_blank"
+        rel="noreferrer"
+        className={styles.imagelogoatag}
+      >
+        <img
+          src={saferpaylogo}
+          className={styles.imagelogo}
+          alt=""
+        />
+      </a>
     </div>
   );
 };

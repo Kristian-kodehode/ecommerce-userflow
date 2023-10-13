@@ -11,6 +11,10 @@
   margin-bottom: 0px;
 }
 
+.imagelogoatag {
+  margin: 0 auto;
+}
+
 .imagelogo {
   margin: 0 auto;
   transform: scale(0.8);
