@@ -13,6 +13,10 @@
 
 .imagelogoatag {
   margin: 0 auto;
+  transition: 0.3s;
+}
+.imagelogoatag:hover {
+  transform: scale(1.05);
 }
 
 .imagelogo {
